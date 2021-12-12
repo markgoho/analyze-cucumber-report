@@ -21,4 +21,4 @@ jobs:
       - uses: actions/checkout@v2
       - uses: ./
         with:
-          local-report: 'ci/test-report.json'
+          local-report: 'local-cucumber-report.json'

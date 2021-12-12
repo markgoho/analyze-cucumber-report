@@ -8,7 +8,7 @@ inputs:
   output-report:
     required: false
     description: 'relative path to output report'
-    default: 'local-cucumber-report.json'
+    default: 'cucumber-split-config.json'
 runs:
   using: 'node16'
   main: 'dist/index.js'
