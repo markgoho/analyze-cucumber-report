@@ -38,7 +38,7 @@ async function run(): Promise<void> {
   // core.debug(new Date().toTimeString())
 
   // core.setOutput('time', new Date().toTimeString())
-  const outputPath = core.getInput('output-path');
+  const outputPath = core.getInput('output-report');
   try {
     await fs.writeFile(outputPath, JSON.stringify(splitConfig));
   } catch (error) {
