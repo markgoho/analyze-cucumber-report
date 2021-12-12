@@ -80,7 +80,7 @@ async function run() {
     // await wait(parseInt(ms, 10))
     // core.debug(new Date().toTimeString())
     // core.setOutput('time', new Date().toTimeString())
-    const outputPath = core.getInput('output-path');
+    const outputPath = core.getInput('output-report');
     try {
         await fs_1.promises.writeFile(outputPath, JSON.stringify(splitConfig));
     }
