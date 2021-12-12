@@ -10,5 +10,5 @@ inputs:
     description: 'relative path to output report'
     default: 'local-cucumber-report.json'
 runs:
-  using: 'node12'
+  using: 'node16'
   main: 'dist/index.js'

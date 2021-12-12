@@ -50,46 +50,35 @@ var __importStar = (this && this.__importStar) || function (mod) {
     __setModuleDefault(result, mod);
     return result;
 };
-var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
-    function adopt(value) { return value instanceof P ? value : new P(function (resolve) { resolve(value); }); }
-    return new (P || (P = Promise))(function (resolve, reject) {
-        function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }
-        function rejected(value) { try { step(generator["throw"](value)); } catch (e) { reject(e); } }
-        function step(result) { result.done ? resolve(result.value) : adopt(result.value).then(fulfilled, rejected); }
-        step((generator = generator.apply(thisArg, _arguments || [])).next());
-    });
-};
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 const core = __importStar(__nccwpck_require__(2186));
 const split_config_generator_1 = __nccwpck_require__(3116);
 const fs_1 = __nccwpck_require__(5747);
 const report_to_runtime_1 = __nccwpck_require__(1588);
 const runtime_details_1 = __nccwpck_require__(2271);
-function run() {
-    return __awaiter(this, void 0, void 0, function* () {
-        try {
-            const cucumberReportPath = core.getInput('local-report');
-            const cucumberReportString = yield fs_1.promises.readFile(cucumberReportPath, 'utf-8');
-            const cucumberReport = JSON.parse(cucumberReportString);
-            const files = (0, report_to_runtime_1.reportToRuntime)(cucumberReport);
-            const splitConfig = (0, split_config_generator_1.createSplitConfig)(files);
-            const details = (0, runtime_details_1.runtimeDetails)(files);
-            // eslint-disable-next-line no-console
-            console.log(details);
-            // const ms: string = core.getInput('milliseconds')
-            // core.debug(`Waiting ${ms} milliseconds ...`) // debug is only output if you set the secret `ACTIONS_STEP_DEBUG` to true
-            // core.debug(new Date().toTimeString())
-            // await wait(parseInt(ms, 10))
-            // core.debug(new Date().toTimeString())
-            // core.setOutput('time', new Date().toTimeString())
-            const outputPath = core.getInput('output-path');
-            yield fs_1.promises.writeFile(outputPath, JSON.stringify(splitConfig));
-        }
-        catch (error) {
-            if (error instanceof Error)
-                core.setFailed(error.message);
-        }
-    });
+async function run() {
+    try {
+        const cucumberReportPath = core.getInput('local-report');
+        const cucumberReportString = await fs_1.promises.readFile(cucumberReportPath, 'utf-8');
+        const cucumberReport = JSON.parse(cucumberReportString);
+        const files = (0, report_to_runtime_1.reportToRuntime)(cucumberReport);
+        const splitConfig = (0, split_config_generator_1.createSplitConfig)(files);
+        const details = (0, runtime_details_1.runtimeDetails)(files);
+        // eslint-disable-next-line no-console
+        console.log(details);
+        // const ms: string = core.getInput('milliseconds')
+        // core.debug(`Waiting ${ms} milliseconds ...`) // debug is only output if you set the secret `ACTIONS_STEP_DEBUG` to true
+        // core.debug(new Date().toTimeString())
+        // await wait(parseInt(ms, 10))
+        // core.debug(new Date().toTimeString())
+        // core.setOutput('time', new Date().toTimeString())
+        const outputPath = core.getInput('output-path');
+        await fs_1.promises.writeFile(outputPath, JSON.stringify(splitConfig));
+    }
+    catch (error) {
+        if (error instanceof Error)
+            core.setFailed(error.message);
+    }
 }
 run();
 
