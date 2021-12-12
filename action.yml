@@ -1,11 +1,14 @@
-name: 'Your name here'
-description: 'Provide a description here'
-author: 'Your name or organization here'
+name: 'Analyze Cucumber Report'
+description: 'Reads a cucumber report and generates a split config file'
+author: 'Mark Goho'
 inputs:
-  milliseconds: # change this
+  local-report:
     required: true
-    description: 'input description here'
-    default: 'default value if applicable'
+    description: 'relative path to cucumber report'
+  output-report:
+    required: false
+    description: 'relative path to output report'
+    default: 'local-cucumber-report.json'
 runs:
   using: 'node12'
   main: 'dist/index.js'
