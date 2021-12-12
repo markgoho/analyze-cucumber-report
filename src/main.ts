@@ -11,28 +11,42 @@ import { reportToRuntime } from './report-to-runtime';
 import { runtimeDetails } from './runtime-details';
 
 async function run(): Promise<void> {
+  const cucumberReportPath = core.getInput('local-report');
+  let cucumberReportString: string;
+
   try {
-    const cucumberReportPath = core.getInput('local-report');
-    const cucumberReportString = await fs.readFile(cucumberReportPath, 'utf-8');
-    const cucumberReport: CucumberFeature[] = JSON.parse(cucumberReportString);
+    cucumberReportString = await fs.readFile(cucumberReportPath, 'utf-8');
+  } catch (error) {
+    if (error instanceof Error) {
+      core.setFailed(`Could not read report: ${error.message}`);
+    }
+    return;
+  }
 
-    const files: FileWithRuntime[] = reportToRuntime(cucumberReport);
-    const splitConfig: SplitConfig = createSplitConfig(files);
-    const details = runtimeDetails(files);
-    // eslint-disable-next-line no-console
-    console.log(details);
-    // const ms: string = core.getInput('milliseconds')
-    // core.debug(`Waiting ${ms} milliseconds ...`) // debug is only output if you set the secret `ACTIONS_STEP_DEBUG` to true
+  const cucumberReport: CucumberFeature[] = JSON.parse(cucumberReportString);
 
-    // core.debug(new Date().toTimeString())
-    // await wait(parseInt(ms, 10))
-    // core.debug(new Date().toTimeString())
+  const files: FileWithRuntime[] = reportToRuntime(cucumberReport);
+  const splitConfig: SplitConfig = createSplitConfig(files);
+  const details = runtimeDetails(files);
+  // eslint-disable-next-line no-console
+  console.log(details);
+  // const ms: string = core.getInput('milliseconds')
+  // core.debug(`Waiting ${ms} milliseconds ...`) // debug is only output if you set the secret `ACTIONS_STEP_DEBUG` to true
 
-    // core.setOutput('time', new Date().toTimeString())
-    const outputPath = core.getInput('output-path');
+  // core.debug(new Date().toTimeString())
+  // await wait(parseInt(ms, 10))
+  // core.debug(new Date().toTimeString())
+
+  // core.setOutput('time', new Date().toTimeString())
+  const outputPath = core.getInput('output-path');
+  try {
     await fs.writeFile(outputPath, JSON.stringify(splitConfig));
   } catch (error) {
-    if (error instanceof Error) core.setFailed(error.message);
+    if (error instanceof Error) {
+      core.setFailed(
+        `Setting report to ${outputPath} failed: ${error.message}`,
+      );
+    }
   }
 }
 
