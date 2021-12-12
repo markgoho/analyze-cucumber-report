@@ -57,27 +57,37 @@ const fs_1 = __nccwpck_require__(5747);
 const report_to_runtime_1 = __nccwpck_require__(1588);
 const runtime_details_1 = __nccwpck_require__(2271);
 async function run() {
+    const cucumberReportPath = core.getInput('local-report');
+    let cucumberReportString;
     try {
-        const cucumberReportPath = core.getInput('local-report');
-        const cucumberReportString = await fs_1.promises.readFile(cucumberReportPath, 'utf-8');
-        const cucumberReport = JSON.parse(cucumberReportString);
-        const files = (0, report_to_runtime_1.reportToRuntime)(cucumberReport);
-        const splitConfig = (0, split_config_generator_1.createSplitConfig)(files);
-        const details = (0, runtime_details_1.runtimeDetails)(files);
-        // eslint-disable-next-line no-console
-        console.log(details);
-        // const ms: string = core.getInput('milliseconds')
-        // core.debug(`Waiting ${ms} milliseconds ...`) // debug is only output if you set the secret `ACTIONS_STEP_DEBUG` to true
-        // core.debug(new Date().toTimeString())
-        // await wait(parseInt(ms, 10))
-        // core.debug(new Date().toTimeString())
-        // core.setOutput('time', new Date().toTimeString())
-        const outputPath = core.getInput('output-path');
+        cucumberReportString = await fs_1.promises.readFile(cucumberReportPath, 'utf-8');
+    }
+    catch (error) {
+        if (error instanceof Error) {
+            core.setFailed(`Could not read report: ${error.message}`);
+        }
+        return;
+    }
+    const cucumberReport = JSON.parse(cucumberReportString);
+    const files = (0, report_to_runtime_1.reportToRuntime)(cucumberReport);
+    const splitConfig = (0, split_config_generator_1.createSplitConfig)(files);
+    const details = (0, runtime_details_1.runtimeDetails)(files);
+    // eslint-disable-next-line no-console
+    console.log(details);
+    // const ms: string = core.getInput('milliseconds')
+    // core.debug(`Waiting ${ms} milliseconds ...`) // debug is only output if you set the secret `ACTIONS_STEP_DEBUG` to true
+    // core.debug(new Date().toTimeString())
+    // await wait(parseInt(ms, 10))
+    // core.debug(new Date().toTimeString())
+    // core.setOutput('time', new Date().toTimeString())
+    const outputPath = core.getInput('output-path');
+    try {
         await fs_1.promises.writeFile(outputPath, JSON.stringify(splitConfig));
     }
     catch (error) {
-        if (error instanceof Error)
-            core.setFailed(error.message);
+        if (error instanceof Error) {
+            core.setFailed(`Setting report to ${outputPath} failed: ${error.message}`);
+        }
     }
 }
 run();
