@@ -102,10 +102,10 @@ const report_to_runtime_1 = __nccwpck_require__(1588);
 const runtime_details_1 = __nccwpck_require__(2271);
 const folder_names_1 = __nccwpck_require__(9885);
 async function run() {
-    const groupFolderPath = core.getInput('group-folder-path');
+    const individualReportsFolder = core.getInput('individual-reports-folder');
     // Move the cucumber reports to a single folder
     try {
-        await (0, move_cucumber_reports_1.moveCucumberReports)(groupFolderPath);
+        await (0, move_cucumber_reports_1.moveCucumberReports)(individualReportsFolder);
     }
     catch (error) {
         if (error instanceof Error) {

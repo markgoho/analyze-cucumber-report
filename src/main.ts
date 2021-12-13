@@ -13,11 +13,13 @@ import { runtimeDetails } from './runtime-details';
 import { tempFolder } from './folder-names';
 
 async function run(): Promise<void> {
-  const groupFolderPath: string = core.getInput('group-folder-path');
+  const individualReportsFolder: string = core.getInput(
+    'individual-reports-folder',
+  );
 
   // Move the cucumber reports to a single folder
   try {
-    await moveCucumberReports(groupFolderPath);
+    await moveCucumberReports(individualReportsFolder);
   } catch (error) {
     if (error instanceof Error) {
       core.setFailed(`Could not move the cucumber reports: ${error.message}`);
