@@ -20,7 +20,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 13700
+              "duration": 13200
             }
           },
           {
@@ -29,7 +29,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 8700
+              "duration": 9600
             }
           },
           {
@@ -38,7 +38,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 45600
+              "duration": 52901
             }
           },
           {
@@ -47,7 +47,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 6600
+              "duration": 26600
             }
           },
           {
@@ -56,7 +56,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 29100
+              "duration": 43900
             }
           },
           {
@@ -65,7 +65,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 7891608
+              "duration": 8626158
             }
           },
           {
@@ -74,7 +74,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 46500
+              "duration": 43101
             }
           }
         ],
@@ -88,7 +88,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 27714227
+              "duration": 29143595
             },
             "after": [
               {
@@ -97,7 +97,7 @@
                 },
                 "result": {
                   "status": "passed",
-                  "duration": 16000
+                  "duration": 18300
                 }
               }
             ]
@@ -111,7 +111,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 1325878063
+              "duration": 1624002982
             },
             "after": [
               {
@@ -134,7 +134,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 113686992210
+              "duration": 117467971817
             },
             "after": [
               {
@@ -143,7 +143,7 @@
                 },
                 "result": {
                   "status": "passed",
-                  "duration": 26700
+                  "duration": 31100
                 }
               }
             ]
@@ -167,7 +167,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 995837792
+              "duration": 1203624623
             },
             "after": [
               {
@@ -176,7 +176,7 @@
                 },
                 "result": {
                   "status": "passed",
-                  "duration": 24001
+                  "duration": 25700
                 }
               }
             ]
@@ -190,7 +190,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 53900
+              "duration": 49400
             },
             "after": [
               {
@@ -199,7 +199,7 @@
                 },
                 "result": {
                   "status": "passed",
-                  "duration": 6000
+                  "duration": 8300
                 }
               }
             ]
@@ -213,7 +213,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 541161739
+              "duration": 686308189
             },
             "after": [
               {
@@ -222,7 +222,7 @@
                 },
                 "result": {
                   "status": "passed",
-                  "duration": 22600
+                  "duration": 24800
                 }
               }
             ]
@@ -235,7 +235,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 33700
+              "duration": 44701
             }
           },
           {
@@ -244,7 +244,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 1820402
+              "duration": 2037113
             }
           },
           {
@@ -253,7 +253,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 12700
+              "duration": 16400
             }
           },
           {
@@ -262,7 +262,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 6700
+              "duration": 13200
             }
           },
           {
@@ -271,7 +271,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 38507838
+              "duration": 51039919
             }
           }
         ]
@@ -289,7 +289,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 10900
+              "duration": 24000
             }
           },
           {
@@ -298,7 +298,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 7700
+              "duration": 10900
             }
           },
           {
@@ -307,7 +307,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 29300
+              "duration": 38100
             }
           },
           {
@@ -316,7 +316,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 8100
+              "duration": 7800
             }
           },
           {
@@ -325,7 +325,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 25500
+              "duration": 22800
             }
           },
           {
@@ -334,7 +334,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 11914912
+              "duration": 14376790
             }
           },
           {
@@ -343,7 +343,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 55200
+              "duration": 61700
             }
           }
         ],
@@ -357,7 +357,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 33110033
+              "duration": 42146263
             },
             "after": [
               {
@@ -366,7 +366,7 @@
                 },
                 "result": {
                   "status": "passed",
-                  "duration": 15500
+                  "duration": 19400
                 }
               }
             ]
@@ -380,7 +380,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 140882540
+              "duration": 157854887
             },
             "after": [
               {
@@ -389,7 +389,7 @@
                 },
                 "result": {
                   "status": "passed",
-                  "duration": 16300
+                  "duration": 19500
                 }
               }
             ]
@@ -403,7 +403,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 420499820
+              "duration": 476090376
             },
             "after": [
               {
@@ -412,7 +412,7 @@
                 },
                 "result": {
                   "status": "passed",
-                  "duration": 26600
+                  "duration": 25300
                 }
               }
             ]
@@ -436,7 +436,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 935556532
+              "duration": 1137575651
             },
             "after": [
               {
@@ -445,7 +445,7 @@
                 },
                 "result": {
                   "status": "passed",
-                  "duration": 24200
+                  "duration": 40001
                 }
               }
             ]
@@ -459,7 +459,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 61700
+              "duration": 46101
             },
             "after": [
               {
@@ -468,7 +468,7 @@
                 },
                 "result": {
                   "status": "passed",
-                  "duration": 5600
+                  "duration": 7500
                 }
               }
             ]
@@ -482,7 +482,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 521311119
+              "duration": 685542302
             },
             "after": [
               {
@@ -491,7 +491,7 @@
                 },
                 "result": {
                   "status": "passed",
-                  "duration": 70700
+                  "duration": 23901
                 }
               }
             ]
@@ -505,7 +505,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 661941755
+              "duration": 808734192
             },
             "after": [
               {
@@ -514,7 +514,7 @@
                 },
                 "result": {
                   "status": "passed",
-                  "duration": 24000
+                  "duration": 24100
                 }
               }
             ]
@@ -528,7 +528,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 63987361
+              "duration": 97948728
             },
             "after": [
               {
@@ -537,7 +537,7 @@
                 },
                 "result": {
                   "status": "passed",
-                  "duration": 20800
+                  "duration": 21701
                 }
               }
             ]
@@ -551,7 +551,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 652756216
+              "duration": 841774604
             },
             "after": [
               {
@@ -560,7 +560,7 @@
                 },
                 "result": {
                   "status": "passed",
-                  "duration": 14700
+                  "duration": 14100
                 }
               }
             ]
@@ -574,76 +574,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 294716679
-            },
-            "after": [
-              {
-                "match": {
-                  "location": "features/step_definitions/employer_profile_steps.rb:315"
-                },
-                "result": {
-                  "status": "passed",
-                  "duration": 21600
-                }
-              }
-            ]
-          },
-          {
-            "keyword": "When ",
-            "name": "Hbx Admin is on Broker Index and clicks Broker Applicants",
-            "line": 21,
-            "match": {
-              "location": "features/support/worlds/broker_agency_world.rb:144"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 335583217
-            },
-            "after": [
-              {
-                "match": {
-                  "location": "features/step_definitions/employer_profile_steps.rb:315"
-                },
-                "result": {
-                  "status": "passed",
-                  "duration": 21500
-                }
-              }
-            ]
-          },
-          {
-            "keyword": "Then ",
-            "name": "Hbx Admin should see the list of broker applicants",
-            "line": 22,
-            "match": {
-              "location": "features/step_definitions/brokers_steps.rb:121"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 35900
-            },
-            "after": [
-              {
-                "match": {
-                  "location": "features/step_definitions/employer_profile_steps.rb:315"
-                },
-                "result": {
-                  "status": "passed",
-                  "duration": 5000
-                }
-              }
-            ]
-          },
-          {
-            "keyword": "And ",
-            "name": "Hbx Admin clicks on the current broker applicant show button",
-            "line": 23,
-            "match": {
-              "location": "features/support/worlds/broker_agency_world.rb:156"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 731933791
+              "duration": 440796830
             },
             "after": [
               {
@@ -658,15 +589,15 @@
             ]
           },
           {
-            "keyword": "And ",
-            "name": "Hbx Admin should see broker application with carrier appointments",
-            "line": 24,
+            "keyword": "When ",
+            "name": "Hbx Admin is on Broker Index and clicks Broker Applicants",
+            "line": 21,
             "match": {
-              "location": "features/hbx/step_definitions/broker_agency_pending_steps.rb:1"
+              "location": "features/support/worlds/broker_agency_world.rb:144"
             },
             "result": {
               "status": "passed",
-              "duration": 2109403492
+              "duration": 338109271
             },
             "after": [
               {
@@ -675,7 +606,76 @@
                 },
                 "result": {
                   "status": "passed",
-                  "duration": 24100
+                  "duration": 25201
+                }
+              }
+            ]
+          },
+          {
+            "keyword": "Then ",
+            "name": "Hbx Admin should see the list of broker applicants",
+            "line": 22,
+            "match": {
+              "location": "features/step_definitions/brokers_steps.rb:121"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 35800
+            },
+            "after": [
+              {
+                "match": {
+                  "location": "features/step_definitions/employer_profile_steps.rb:315"
+                },
+                "result": {
+                  "status": "passed",
+                  "duration": 10700
+                }
+              }
+            ]
+          },
+          {
+            "keyword": "And ",
+            "name": "Hbx Admin clicks on the current broker applicant show button",
+            "line": 23,
+            "match": {
+              "location": "features/support/worlds/broker_agency_world.rb:156"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 818499255
+            },
+            "after": [
+              {
+                "match": {
+                  "location": "features/step_definitions/employer_profile_steps.rb:315"
+                },
+                "result": {
+                  "status": "passed",
+                  "duration": 40500
+                }
+              }
+            ]
+          },
+          {
+            "keyword": "And ",
+            "name": "Hbx Admin should see broker application with carrier appointments",
+            "line": 24,
+            "match": {
+              "location": "features/hbx/step_definitions/broker_agency_pending_steps.rb:1"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2192378775
+            },
+            "after": [
+              {
+                "match": {
+                  "location": "features/step_definitions/employer_profile_steps.rb:315"
+                },
+                "result": {
+                  "status": "passed",
+                  "duration": 23600
                 }
               }
             ]
@@ -689,7 +689,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 313737596
+              "duration": 356537289
             },
             "after": [
               {
@@ -698,7 +698,7 @@
                 },
                 "result": {
                   "status": "passed",
-                  "duration": 24100
+                  "duration": 23700
                 }
               }
             ]
@@ -712,7 +712,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 113657008
+              "duration": 103390064
             },
             "after": [
               {
@@ -721,7 +721,7 @@
                 },
                 "result": {
                   "status": "passed",
-                  "duration": 22500
+                  "duration": 25100
                 }
               }
             ]
@@ -734,7 +734,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 24700
+              "duration": 27801
             }
           },
           {
@@ -743,7 +743,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 9600109
+              "duration": 11617574
             }
           },
           {
@@ -752,7 +752,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 8800
+              "duration": 10000
             }
           },
           {
@@ -761,7 +761,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 7100
+              "duration": 9200
             }
           },
           {
@@ -770,7 +770,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 49084947
+              "duration": 52479637
             }
           }
         ]
