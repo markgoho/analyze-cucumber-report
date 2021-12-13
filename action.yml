@@ -2,9 +2,10 @@ name: 'Analyze Cucumber Report'
 description: 'Reads a cucumber report and generates a split config file'
 author: 'Mark Goho'
 inputs:
-  local-report:
-    required: true
-    description: 'relative path to cucumber report'
+  individual-reports-folder:
+    required: false
+    description: 'The folder containing the downloaded individual cucumber reports'
+    default: 'individual-reports'
   output-report:
     required: false
     description: 'relative path to output report'

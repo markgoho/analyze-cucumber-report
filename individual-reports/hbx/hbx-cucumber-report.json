@@ -1,0 +1,780 @@
+[
+  {
+    "uri": "features/hbx/broker_agency_pending.feature",
+    "id": "hbx-admin-should-be-able-to-send-the-broker-application-to-pending-state",
+    "keyword": "Feature",
+    "name": "HBX Admin should be able to send the broker application to pending state",
+    "description": "",
+    "line": 1,
+    "elements": [
+      {
+        "keyword": "Background",
+        "name": "Setup site, employer, and benefit application",
+        "description": "",
+        "line": 3,
+        "type": "background",
+        "before": [
+          {
+            "match": {
+              "location": "vendor/bundle/ruby/2.5.0/gems/capybara-3.31.0/lib/capybara/cucumber.rb:14"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 13700
+            }
+          },
+          {
+            "match": {
+              "location": "vendor/bundle/ruby/2.5.0/gems/capybara-3.31.0/lib/capybara/cucumber.rb:22"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 8700
+            }
+          },
+          {
+            "match": {
+              "location": "vendor/bundle/ruby/2.5.0/gems/email_spec-2.2.0/lib/email_spec/cucumber.rb:10"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 45600
+            }
+          },
+          {
+            "match": {
+              "location": "vendor/bundle/ruby/2.5.0/gems/capybara-screenshot-1.0.24/lib/capybara-screenshot/cucumber.rb:3"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 6600
+            }
+          },
+          {
+            "match": {
+              "location": "features/support/rails_cache.rb:1"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 29100
+            }
+          },
+          {
+            "match": {
+              "location": "features/support/rails_cache_clear.rb:1"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 7891608
+            }
+          },
+          {
+            "match": {
+              "location": "features/support/screenshots.rb:3"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 46500
+            }
+          }
+        ],
+        "steps": [
+          {
+            "keyword": "Given ",
+            "name": "the shop market configuration is enabled",
+            "line": 4,
+            "match": {
+              "location": "features/step_definitions/integration_steps.rb:350"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 27714227
+            },
+            "after": [
+              {
+                "match": {
+                  "location": "features/step_definitions/employer_profile_steps.rb:315"
+                },
+                "result": {
+                  "status": "passed",
+                  "duration": 16000
+                }
+              }
+            ]
+          },
+          {
+            "keyword": "Given ",
+            "name": "a CCA site exists with a benefit market",
+            "line": 5,
+            "match": {
+              "location": "features/support/worlds/site_world.rb:26"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1325878063
+            },
+            "after": [
+              {
+                "match": {
+                  "location": "features/step_definitions/employer_profile_steps.rb:315"
+                },
+                "result": {
+                  "status": "passed",
+                  "duration": 15800
+                }
+              }
+            ]
+          },
+          {
+            "keyword": "Then ",
+            "name": "user goes to the Broker Registration form",
+            "line": 6,
+            "match": {
+              "location": "features/support/worlds/form_world.rb:167"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 113686992210
+            },
+            "after": [
+              {
+                "match": {
+                  "location": "features/step_definitions/employer_profile_steps.rb:315"
+                },
+                "result": {
+                  "status": "passed",
+                  "duration": 26700
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "hbx-admin-should-be-able-to-send-the-broker-application-to-pending-state;broker-can-enter-ach-information",
+        "keyword": "Scenario",
+        "name": "Broker can enter ACH information",
+        "description": "",
+        "line": 8,
+        "type": "scenario",
+        "steps": [
+          {
+            "keyword": "Given ",
+            "name": "user enters the personal and Broker Agency information",
+            "line": 9,
+            "match": {
+              "location": "features/support/worlds/form_world.rb:173"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 995837792
+            },
+            "after": [
+              {
+                "match": {
+                  "location": "features/step_definitions/employer_profile_steps.rb:315"
+                },
+                "result": {
+                  "status": "passed",
+                  "duration": 24001
+                }
+              }
+            ]
+          },
+          {
+            "keyword": "When ",
+            "name": "user enters the ach routing information",
+            "line": 10,
+            "match": {
+              "location": "features/support/worlds/form_world.rb:177"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 53900
+            },
+            "after": [
+              {
+                "match": {
+                  "location": "features/step_definitions/employer_profile_steps.rb:315"
+                },
+                "result": {
+                  "status": "passed",
+                  "duration": 6000
+                }
+              }
+            ]
+          },
+          {
+            "keyword": "Then ",
+            "name": "user enters the office locations and phones",
+            "line": 11,
+            "match": {
+              "location": "features/support/worlds/form_world.rb:185"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 541161739
+            },
+            "after": [
+              {
+                "match": {
+                  "location": "features/step_definitions/employer_profile_steps.rb:315"
+                },
+                "result": {
+                  "status": "passed",
+                  "duration": 22600
+                }
+              }
+            ]
+          }
+        ],
+        "after": [
+          {
+            "match": {
+              "location": "features/support/warden.rb:3"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 33700
+            }
+          },
+          {
+            "match": {
+              "location": "features/support/user_cleanup.rb:1"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1820402
+            }
+          },
+          {
+            "match": {
+              "location": "vendor/bundle/ruby/2.5.0/gems/capybara-screenshot-1.0.24/lib/capybara-screenshot/cucumber.rb:7"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 12700
+            }
+          },
+          {
+            "match": {
+              "location": "vendor/bundle/ruby/2.5.0/gems/email_spec-2.2.0/lib/email_spec/cucumber.rb:19"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 6700
+            }
+          },
+          {
+            "match": {
+              "location": "vendor/bundle/ruby/2.5.0/gems/capybara-3.31.0/lib/capybara/cucumber.rb:10"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 38507838
+            }
+          }
+        ]
+      },
+      {
+        "keyword": "Background",
+        "name": "Setup site, employer, and benefit application",
+        "description": "",
+        "line": 3,
+        "type": "background",
+        "before": [
+          {
+            "match": {
+              "location": "vendor/bundle/ruby/2.5.0/gems/capybara-3.31.0/lib/capybara/cucumber.rb:14"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 10900
+            }
+          },
+          {
+            "match": {
+              "location": "vendor/bundle/ruby/2.5.0/gems/capybara-3.31.0/lib/capybara/cucumber.rb:22"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 7700
+            }
+          },
+          {
+            "match": {
+              "location": "vendor/bundle/ruby/2.5.0/gems/email_spec-2.2.0/lib/email_spec/cucumber.rb:10"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 29300
+            }
+          },
+          {
+            "match": {
+              "location": "vendor/bundle/ruby/2.5.0/gems/capybara-screenshot-1.0.24/lib/capybara-screenshot/cucumber.rb:3"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 8100
+            }
+          },
+          {
+            "match": {
+              "location": "features/support/rails_cache.rb:1"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 25500
+            }
+          },
+          {
+            "match": {
+              "location": "features/support/rails_cache_clear.rb:1"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 11914912
+            }
+          },
+          {
+            "match": {
+              "location": "features/support/screenshots.rb:3"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 55200
+            }
+          }
+        ],
+        "steps": [
+          {
+            "keyword": "Given ",
+            "name": "the shop market configuration is enabled",
+            "line": 4,
+            "match": {
+              "location": "features/step_definitions/integration_steps.rb:350"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 33110033
+            },
+            "after": [
+              {
+                "match": {
+                  "location": "features/step_definitions/employer_profile_steps.rb:315"
+                },
+                "result": {
+                  "status": "passed",
+                  "duration": 15500
+                }
+              }
+            ]
+          },
+          {
+            "keyword": "Given ",
+            "name": "a CCA site exists with a benefit market",
+            "line": 5,
+            "match": {
+              "location": "features/support/worlds/site_world.rb:26"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 140882540
+            },
+            "after": [
+              {
+                "match": {
+                  "location": "features/step_definitions/employer_profile_steps.rb:315"
+                },
+                "result": {
+                  "status": "passed",
+                  "duration": 16300
+                }
+              }
+            ]
+          },
+          {
+            "keyword": "Then ",
+            "name": "user goes to the Broker Registration form",
+            "line": 6,
+            "match": {
+              "location": "features/support/worlds/form_world.rb:167"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 420499820
+            },
+            "after": [
+              {
+                "match": {
+                  "location": "features/step_definitions/employer_profile_steps.rb:315"
+                },
+                "result": {
+                  "status": "passed",
+                  "duration": 26600
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "hbx-admin-should-be-able-to-send-the-broker-application-to-pending-state;hbx-admin-sends-a-broker-applicant-to-a-pending-state-and-approves-through-admin-portal",
+        "keyword": "Scenario",
+        "name": "HBX Admin sends a Broker Applicant to a pending state and approves through Admin portal",
+        "description": "",
+        "line": 13,
+        "type": "scenario",
+        "steps": [
+          {
+            "keyword": "Given ",
+            "name": "user enters the personal and Broker Agency information",
+            "line": 14,
+            "match": {
+              "location": "features/support/worlds/form_world.rb:173"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 935556532
+            },
+            "after": [
+              {
+                "match": {
+                  "location": "features/step_definitions/employer_profile_steps.rb:315"
+                },
+                "result": {
+                  "status": "passed",
+                  "duration": 24200
+                }
+              }
+            ]
+          },
+          {
+            "keyword": "And ",
+            "name": "user enters the ach routing information",
+            "line": 15,
+            "match": {
+              "location": "features/support/worlds/form_world.rb:177"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 61700
+            },
+            "after": [
+              {
+                "match": {
+                  "location": "features/step_definitions/employer_profile_steps.rb:315"
+                },
+                "result": {
+                  "status": "passed",
+                  "duration": 5600
+                }
+              }
+            ]
+          },
+          {
+            "keyword": "And ",
+            "name": "user enters the office locations and phones",
+            "line": 16,
+            "match": {
+              "location": "features/support/worlds/form_world.rb:185"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 521311119
+            },
+            "after": [
+              {
+                "match": {
+                  "location": "features/step_definitions/employer_profile_steps.rb:315"
+                },
+                "result": {
+                  "status": "passed",
+                  "duration": 70700
+                }
+              }
+            ]
+          },
+          {
+            "keyword": "When ",
+            "name": "user clicks on Create Broker Agency button",
+            "line": 17,
+            "match": {
+              "location": "features/support/worlds/form_world.rb:189"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 661941755
+            },
+            "after": [
+              {
+                "match": {
+                  "location": "features/step_definitions/employer_profile_steps.rb:315"
+                },
+                "result": {
+                  "status": "passed",
+                  "duration": 24000
+                }
+              }
+            ]
+          },
+          {
+            "keyword": "Then ",
+            "name": "user should see the broker registration successful message",
+            "line": 18,
+            "match": {
+              "location": "features/support/worlds/form_world.rb:193"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 63987361
+            },
+            "after": [
+              {
+                "match": {
+                  "location": "features/step_definitions/employer_profile_steps.rb:315"
+                },
+                "result": {
+                  "status": "passed",
+                  "duration": 20800
+                }
+              }
+            ]
+          },
+          {
+            "keyword": "When ",
+            "name": "that a user with a HBX staff role with HBX Staff subrole exists and is logged in",
+            "line": 19,
+            "match": {
+              "location": "features/support/worlds/user_world.rb:84"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 652756216
+            },
+            "after": [
+              {
+                "match": {
+                  "location": "features/step_definitions/employer_profile_steps.rb:315"
+                },
+                "result": {
+                  "status": "passed",
+                  "duration": 14700
+                }
+              }
+            ]
+          },
+          {
+            "keyword": "Then ",
+            "name": "Hbx Admin is on Broker Index of the Admin Dashboard",
+            "line": 20,
+            "match": {
+              "location": "features/support/worlds/broker_agency_world.rb:139"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 294716679
+            },
+            "after": [
+              {
+                "match": {
+                  "location": "features/step_definitions/employer_profile_steps.rb:315"
+                },
+                "result": {
+                  "status": "passed",
+                  "duration": 21600
+                }
+              }
+            ]
+          },
+          {
+            "keyword": "When ",
+            "name": "Hbx Admin is on Broker Index and clicks Broker Applicants",
+            "line": 21,
+            "match": {
+              "location": "features/support/worlds/broker_agency_world.rb:144"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 335583217
+            },
+            "after": [
+              {
+                "match": {
+                  "location": "features/step_definitions/employer_profile_steps.rb:315"
+                },
+                "result": {
+                  "status": "passed",
+                  "duration": 21500
+                }
+              }
+            ]
+          },
+          {
+            "keyword": "Then ",
+            "name": "Hbx Admin should see the list of broker applicants",
+            "line": 22,
+            "match": {
+              "location": "features/step_definitions/brokers_steps.rb:121"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 35900
+            },
+            "after": [
+              {
+                "match": {
+                  "location": "features/step_definitions/employer_profile_steps.rb:315"
+                },
+                "result": {
+                  "status": "passed",
+                  "duration": 5000
+                }
+              }
+            ]
+          },
+          {
+            "keyword": "And ",
+            "name": "Hbx Admin clicks on the current broker applicant show button",
+            "line": 23,
+            "match": {
+              "location": "features/support/worlds/broker_agency_world.rb:156"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 731933791
+            },
+            "after": [
+              {
+                "match": {
+                  "location": "features/step_definitions/employer_profile_steps.rb:315"
+                },
+                "result": {
+                  "status": "passed",
+                  "duration": 26600
+                }
+              }
+            ]
+          },
+          {
+            "keyword": "And ",
+            "name": "Hbx Admin should see broker application with carrier appointments",
+            "line": 24,
+            "match": {
+              "location": "features/hbx/step_definitions/broker_agency_pending_steps.rb:1"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2109403492
+            },
+            "after": [
+              {
+                "match": {
+                  "location": "features/step_definitions/employer_profile_steps.rb:315"
+                },
+                "result": {
+                  "status": "passed",
+                  "duration": 24100
+                }
+              }
+            ]
+          },
+          {
+            "keyword": "When ",
+            "name": "Admin clicks on the pending button",
+            "line": 25,
+            "match": {
+              "location": "features/hbx/step_definitions/broker_agency_pending_steps.rb:10"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 313737596
+            },
+            "after": [
+              {
+                "match": {
+                  "location": "features/step_definitions/employer_profile_steps.rb:315"
+                },
+                "result": {
+                  "status": "passed",
+                  "duration": 24100
+                }
+              }
+            ]
+          },
+          {
+            "keyword": "Then ",
+            "name": "Hbx Admin views a successful message",
+            "line": 26,
+            "match": {
+              "location": "features/hbx/step_definitions/broker_agency_pending_steps.rb:14"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 113657008
+            },
+            "after": [
+              {
+                "match": {
+                  "location": "features/step_definitions/employer_profile_steps.rb:315"
+                },
+                "result": {
+                  "status": "passed",
+                  "duration": 22500
+                }
+              }
+            ]
+          }
+        ],
+        "after": [
+          {
+            "match": {
+              "location": "features/support/warden.rb:3"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 24700
+            }
+          },
+          {
+            "match": {
+              "location": "features/support/user_cleanup.rb:1"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 9600109
+            }
+          },
+          {
+            "match": {
+              "location": "vendor/bundle/ruby/2.5.0/gems/capybara-screenshot-1.0.24/lib/capybara-screenshot/cucumber.rb:7"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 8800
+            }
+          },
+          {
+            "match": {
+              "location": "vendor/bundle/ruby/2.5.0/gems/email_spec-2.2.0/lib/email_spec/cucumber.rb:19"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 7100
+            }
+          },
+          {
+            "match": {
+              "location": "vendor/bundle/ruby/2.5.0/gems/capybara-3.31.0/lib/capybara/cucumber.rb:10"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 49084947
+            }
+          }
+        ]
+      }
+    ]
+  }
+]

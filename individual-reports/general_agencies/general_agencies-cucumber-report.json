@@ -1,0 +1,4666 @@
+[
+  {
+    "uri": "features/general_agencies/create_general_agency_staff.feature",
+    "id": "assign-general-agency-staff-to-general-agency",
+    "keyword": "Feature",
+    "name": "Assign General Agency Staff to General Agency",
+    "description": "",
+    "line": 1,
+    "elements": [
+      {
+        "id": "assign-general-agency-staff-to-general-agency;general-staff-has-not-signed-up-on-the-hbx",
+        "keyword": "Scenario",
+        "name": "General Staff has not signed up on the HBX",
+        "description": "",
+        "line": 3,
+        "type": "scenario",
+        "before": [
+          {
+            "match": {
+              "location": "vendor/bundle/ruby/2.5.0/gems/capybara-3.31.0/lib/capybara/cucumber.rb:14"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 13600
+            }
+          },
+          {
+            "match": {
+              "location": "vendor/bundle/ruby/2.5.0/gems/capybara-3.31.0/lib/capybara/cucumber.rb:22"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 9400
+            }
+          },
+          {
+            "match": {
+              "location": "vendor/bundle/ruby/2.5.0/gems/email_spec-2.2.0/lib/email_spec/cucumber.rb:10"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 48900
+            }
+          },
+          {
+            "match": {
+              "location": "vendor/bundle/ruby/2.5.0/gems/capybara-screenshot-1.0.24/lib/capybara-screenshot/cucumber.rb:3"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 9000
+            }
+          },
+          {
+            "match": {
+              "location": "features/support/rails_cache.rb:1"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 27800
+            }
+          },
+          {
+            "match": {
+              "location": "features/support/rails_cache_clear.rb:1"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 8152646
+            }
+          },
+          {
+            "match": {
+              "location": "features/support/screenshots.rb:3"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 39200
+            }
+          }
+        ],
+        "steps": [
+          {
+            "keyword": "Given ",
+            "name": "the shop market configuration is enabled",
+            "line": 4,
+            "match": {
+              "location": "features/step_definitions/integration_steps.rb:350"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 26374446
+            },
+            "after": [
+              {
+                "match": {
+                  "location": "features/step_definitions/employer_profile_steps.rb:315"
+                },
+                "result": {
+                  "status": "passed",
+                  "duration": 17300
+                }
+              }
+            ]
+          },
+          {
+            "keyword": "Given ",
+            "name": "the general agency feature is enabled",
+            "line": 5,
+            "match": {
+              "location": "features/step_definitions/general_agency_steps.rb:3"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 72401
+            },
+            "after": [
+              {
+                "match": {
+                  "location": "features/step_definitions/employer_profile_steps.rb:315"
+                },
+                "result": {
+                  "status": "passed",
+                  "duration": 7900
+                }
+              }
+            ]
+          },
+          {
+            "keyword": "Given ",
+            "name": "all announcements are enabled for user to select",
+            "line": 6,
+            "match": {
+              "location": "features/hbx_admin/step_definitions/manage_sep_types_steps.rb:987"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 114401
+            },
+            "after": [
+              {
+                "match": {
+                  "location": "features/step_definitions/employer_profile_steps.rb:315"
+                },
+                "result": {
+                  "status": "passed",
+                  "duration": 8700
+                }
+              }
+            ]
+          },
+          {
+            "keyword": "Given ",
+            "name": "a CCA site exists with a benefit market",
+            "line": 7,
+            "match": {
+              "location": "features/support/worlds/site_world.rb:26"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1528402310
+            },
+            "after": [
+              {
+                "match": {
+                  "location": "features/step_definitions/employer_profile_steps.rb:315"
+                },
+                "result": {
+                  "status": "passed",
+                  "duration": 15300
+                }
+              }
+            ]
+          },
+          {
+            "keyword": "Given ",
+            "name": "there is a General Agency exists for District Agency Inc",
+            "line": 8,
+            "match": {
+              "location": "features/support/worlds/general_agency_world.rb:49"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 26351047
+            },
+            "after": [
+              {
+                "match": {
+                  "location": "features/step_definitions/employer_profile_steps.rb:315"
+                },
+                "result": {
+                  "status": "passed",
+                  "duration": 11700
+                }
+              }
+            ]
+          },
+          {
+            "keyword": "Given ",
+            "name": "all permissions are present",
+            "line": 9,
+            "match": {
+              "location": "features/support/worlds/permissions_world.rb:123"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 764841658
+            },
+            "after": [
+              {
+                "match": {
+                  "location": "features/step_definitions/employer_profile_steps.rb:315"
+                },
+                "result": {
+                  "status": "passed",
+                  "duration": 18300
+                }
+              }
+            ]
+          },
+          {
+            "keyword": "And ",
+            "name": "the staff Max Planck is primary ga staff for District Agency Inc",
+            "line": 10,
+            "match": {
+              "location": "features/support/worlds/general_agency_world.rb:55"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 241707345
+            },
+            "after": [
+              {
+                "match": {
+                  "location": "features/step_definitions/employer_profile_steps.rb:315"
+                },
+                "result": {
+                  "status": "passed",
+                  "duration": 41100
+                }
+              }
+            ]
+          },
+          {
+            "keyword": "Given ",
+            "name": "a general agency agent visits the DCHBX",
+            "line": 11,
+            "match": {
+              "location": "features/general_agencies/step_definitions/ga_steps.rb:11"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 115222364690
+            },
+            "after": [
+              {
+                "match": {
+                  "location": "features/step_definitions/employer_profile_steps.rb:315"
+                },
+                "result": {
+                  "status": "passed",
+                  "duration": 28100
+                }
+              }
+            ]
+          },
+          {
+            "keyword": "When ",
+            "name": "they click the 'New General Agency' button",
+            "line": 12,
+            "match": {
+              "location": "features/general_agencies/step_definitions/ga_steps.rb:37"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 92401488
+            },
+            "after": [
+              {
+                "match": {
+                  "location": "features/step_definitions/employer_profile_steps.rb:315"
+                },
+                "result": {
+                  "status": "passed",
+                  "duration": 30300
+                }
+              }
+            ]
+          },
+          {
+            "keyword": "Given ",
+            "name": "GA Staff has not signed up as an HBX user",
+            "line": 14,
+            "match": {
+              "location": "features/step_definitions/integration_steps.rb:502"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 5012674778
+            },
+            "after": [
+              {
+                "match": {
+                  "location": "features/step_definitions/employer_profile_steps.rb:315"
+                },
+                "result": {
+                  "status": "passed",
+                  "duration": 24801
+                }
+              }
+            ]
+          },
+          {
+            "keyword": "Then ",
+            "name": "GA Staff should see the General Agency Staff Registration form",
+            "line": 15,
+            "match": {
+              "location": "features/step_definitions/ga_staff_steps.rb:13"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 30969487
+            },
+            "after": [
+              {
+                "match": {
+                  "location": "features/step_definitions/employer_profile_steps.rb:315"
+                },
+                "result": {
+                  "status": "passed",
+                  "duration": 15301
+                }
+              }
+            ]
+          },
+          {
+            "keyword": "When ",
+            "name": "GA staff enters his personal information",
+            "line": 16,
+            "match": {
+              "location": "features/step_definitions/ga_staff_steps.rb:3"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 672804062
+            },
+            "after": [
+              {
+                "match": {
+                  "location": "features/step_definitions/employer_profile_steps.rb:315"
+                },
+                "result": {
+                  "status": "passed",
+                  "duration": 51700
+                }
+              }
+            ]
+          },
+          {
+            "keyword": "And ",
+            "name": "GA staff searches for General Agency which exists in EA",
+            "line": 17,
+            "match": {
+              "location": "features/step_definitions/ga_staff_steps.rb:18"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 204895338
+            },
+            "after": [
+              {
+                "match": {
+                  "location": "features/step_definitions/employer_profile_steps.rb:315"
+                },
+                "result": {
+                  "status": "passed",
+                  "duration": 19300
+                }
+              }
+            ]
+          },
+          {
+            "keyword": "And ",
+            "name": "GA staff should see a list of General Agencies searched and selects his agency",
+            "line": 18,
+            "match": {
+              "location": "features/step_definitions/ga_staff_steps.rb:24"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 199091402
+            },
+            "after": [
+              {
+                "match": {
+                  "location": "features/step_definitions/employer_profile_steps.rb:315"
+                },
+                "result": {
+                  "status": "passed",
+                  "duration": 168901
+                }
+              }
+            ]
+          },
+          {
+            "keyword": "Then ",
+            "name": "GA staff submits his application and see successful message",
+            "line": 19,
+            "match": {
+              "location": "features/step_definitions/ga_staff_steps.rb:28"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 288775144
+            },
+            "after": [
+              {
+                "match": {
+                  "location": "features/step_definitions/employer_profile_steps.rb:315"
+                },
+                "result": {
+                  "status": "passed",
+                  "duration": 21300
+                }
+              }
+            ]
+          },
+          {
+            "keyword": "And ",
+            "name": "Max Planck logs on to the General Agency Portal",
+            "line": 21,
+            "match": {
+              "location": "features/step_definitions/integration_steps.rb:444"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1256722688
+            },
+            "after": [
+              {
+                "match": {
+                  "location": "features/step_definitions/employer_profile_steps.rb:315"
+                },
+                "result": {
+                  "status": "passed",
+                  "duration": 27701
+                }
+              }
+            ]
+          },
+          {
+            "keyword": "And ",
+            "name": "there is a Staff with a “pending” general agency staff role in the table",
+            "line": 22,
+            "match": {
+              "location": "features/step_definitions/ga_staff_steps.rb:34"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 236259826
+            },
+            "after": [
+              {
+                "match": {
+                  "location": "features/step_definitions/employer_profile_steps.rb:315"
+                },
+                "result": {
+                  "status": "passed",
+                  "duration": 24300
+                }
+              }
+            ]
+          },
+          {
+            "keyword": "When ",
+            "name": "the primary staff clicks on the approve button",
+            "line": 23,
+            "match": {
+              "location": "features/step_definitions/ga_staff_steps.rb:41"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 50452705
+            },
+            "after": [
+              {
+                "match": {
+                  "location": "features/step_definitions/employer_profile_steps.rb:315"
+                },
+                "result": {
+                  "status": "passed",
+                  "duration": 21800
+                }
+              }
+            ]
+          },
+          {
+            "keyword": "Then ",
+            "name": "the primary staff should see an approval popup",
+            "line": 24,
+            "match": {
+              "location": "features/step_definitions/ga_staff_steps.rb:45"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 227512273
+            },
+            "after": [
+              {
+                "match": {
+                  "location": "features/step_definitions/employer_profile_steps.rb:315"
+                },
+                "result": {
+                  "status": "passed",
+                  "duration": 51800
+                }
+              }
+            ]
+          },
+          {
+            "keyword": "Then ",
+            "name": "the primary staff clicks on continue and approve button",
+            "line": 25,
+            "match": {
+              "location": "features/step_definitions/ga_staff_steps.rb:49"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 110367857
+            },
+            "after": [
+              {
+                "match": {
+                  "location": "features/step_definitions/employer_profile_steps.rb:315"
+                },
+                "result": {
+                  "status": "passed",
+                  "duration": 18300
+                }
+              }
+            ]
+          },
+          {
+            "keyword": "Then ",
+            "name": "the primary staff should see the staff successfully approved message",
+            "line": 26,
+            "match": {
+              "location": "features/step_definitions/ga_staff_steps.rb:53"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 361194684
+            },
+            "after": [
+              {
+                "match": {
+                  "location": "features/step_definitions/employer_profile_steps.rb:315"
+                },
+                "result": {
+                  "status": "passed",
+                  "duration": 25601
+                }
+              }
+            ]
+          },
+          {
+            "keyword": "And ",
+            "name": "new ga staff should receive an email",
+            "line": 27,
+            "match": {
+              "location": "features/step_definitions/ga_staff_steps.rb:65"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 699504
+            },
+            "after": [
+              {
+                "match": {
+                  "location": "features/step_definitions/employer_profile_steps.rb:315"
+                },
+                "result": {
+                  "status": "passed",
+                  "duration": 10300
+                }
+              }
+            ]
+          },
+          {
+            "keyword": "And ",
+            "name": "the primary staff logs out",
+            "line": 28,
+            "match": {
+              "location": "features/step_definitions/integration_steps.rb:543"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 590063404
+            },
+            "after": [
+              {
+                "match": {
+                  "location": "features/step_definitions/employer_profile_steps.rb:315"
+                },
+                "result": {
+                  "status": "passed",
+                  "duration": 21001
+                }
+              }
+            ]
+          },
+          {
+            "keyword": "When ",
+            "name": "new ga staff visits the link received in the approval email",
+            "line": 30,
+            "match": {
+              "location": "features/step_definitions/ga_staff_steps.rb:69"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 231983138
+            },
+            "after": [
+              {
+                "match": {
+                  "location": "features/step_definitions/employer_profile_steps.rb:315"
+                },
+                "result": {
+                  "status": "passed",
+                  "duration": 24701
+                }
+              }
+            ]
+          },
+          {
+            "keyword": "Then ",
+            "name": "they should see an account creation form",
+            "line": 31,
+            "match": {
+              "location": "features/general_agencies/step_definitions/ga_steps.rb:115"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 41766741
+            },
+            "after": [
+              {
+                "match": {
+                  "location": "features/step_definitions/employer_profile_steps.rb:315"
+                },
+                "result": {
+                  "status": "passed",
+                  "duration": 95800
+                }
+              }
+            ]
+          },
+          {
+            "keyword": "When ",
+            "name": "new ga staff completes the account creation form and hit the 'Submit' button",
+            "line": 32,
+            "match": {
+              "location": "features/step_definitions/ga_staff_steps.rb:78"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 966197373
+            },
+            "after": [
+              {
+                "match": {
+                  "location": "features/step_definitions/employer_profile_steps.rb:315"
+                },
+                "result": {
+                  "status": "passed",
+                  "duration": 24000
+                }
+              }
+            ]
+          },
+          {
+            "keyword": "Then ",
+            "name": "they should see a welcome message",
+            "line": 33,
+            "match": {
+              "location": "features/general_agencies/step_definitions/ga_steps.rb:129"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 74269528
+            },
+            "after": [
+              {
+                "match": {
+                  "location": "features/step_definitions/employer_profile_steps.rb:315"
+                },
+                "result": {
+                  "status": "passed",
+                  "duration": 47600
+                }
+              }
+            ]
+          },
+          {
+            "keyword": "And ",
+            "name": "they see the General Agency homepage",
+            "line": 34,
+            "match": {
+              "location": "features/general_agencies/step_definitions/ga_steps.rb:134"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 50463691
+            },
+            "after": [
+              {
+                "match": {
+                  "location": "features/step_definitions/employer_profile_steps.rb:315"
+                },
+                "result": {
+                  "status": "passed",
+                  "duration": 26100
+                }
+              }
+            ]
+          },
+          {
+            "keyword": "And ",
+            "name": "the primary staff logs out",
+            "line": 35,
+            "match": {
+              "location": "features/step_definitions/integration_steps.rb:543"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 595402235
+            },
+            "after": [
+              {
+                "match": {
+                  "location": "features/step_definitions/employer_profile_steps.rb:315"
+                },
+                "result": {
+                  "status": "passed",
+                  "duration": 22900
+                }
+              }
+            ]
+          },
+          {
+            "keyword": "And ",
+            "name": "Max Planck logs on to the General Agency Portal",
+            "line": 37,
+            "match": {
+              "location": "features/step_definitions/integration_steps.rb:444"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1090415090
+            },
+            "after": [
+              {
+                "match": {
+                  "location": "features/step_definitions/employer_profile_steps.rb:315"
+                },
+                "result": {
+                  "status": "passed",
+                  "duration": 15300
+                }
+              }
+            ]
+          },
+          {
+            "keyword": "When ",
+            "name": "the primary staff removes ga staff from ga staff table",
+            "line": 38,
+            "match": {
+              "location": "features/step_definitions/ga_staff_steps.rb:57"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 454992025
+            },
+            "after": [
+              {
+                "match": {
+                  "location": "features/step_definitions/employer_profile_steps.rb:315"
+                },
+                "result": {
+                  "status": "passed",
+                  "duration": 25100
+                }
+              }
+            ]
+          },
+          {
+            "keyword": "Then ",
+            "name": "the primary staff should see the staff successfully removed message",
+            "line": 39,
+            "match": {
+              "location": "features/step_definitions/ga_staff_steps.rb:61"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 124416318
+            },
+            "after": [
+              {
+                "match": {
+                  "location": "features/step_definitions/employer_profile_steps.rb:315"
+                },
+                "result": {
+                  "status": "passed",
+                  "duration": 25100
+                }
+              }
+            ]
+          },
+          {
+            "keyword": "And ",
+            "name": "the primary staff logs out",
+            "line": 40,
+            "match": {
+              "location": "features/step_definitions/integration_steps.rb:543"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 581590955
+            },
+            "after": [
+              {
+                "match": {
+                  "location": "features/step_definitions/employer_profile_steps.rb:315"
+                },
+                "result": {
+                  "status": "passed",
+                  "duration": 26000
+                }
+              }
+            ]
+          }
+        ],
+        "after": [
+          {
+            "match": {
+              "location": "features/support/warden.rb:3"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 28100
+            }
+          },
+          {
+            "match": {
+              "location": "features/support/user_cleanup.rb:1"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 10617661
+            }
+          },
+          {
+            "match": {
+              "location": "vendor/bundle/ruby/2.5.0/gems/capybara-screenshot-1.0.24/lib/capybara-screenshot/cucumber.rb:7"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 15100
+            }
+          },
+          {
+            "match": {
+              "location": "vendor/bundle/ruby/2.5.0/gems/email_spec-2.2.0/lib/email_spec/cucumber.rb:19"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 8400
+            }
+          },
+          {
+            "match": {
+              "location": "vendor/bundle/ruby/2.5.0/gems/capybara-3.31.0/lib/capybara/cucumber.rb:10"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 48079277
+            }
+          }
+        ]
+      },
+      {
+        "id": "assign-general-agency-staff-to-general-agency;adding-existing-person-as-general-agency-staff-to-general-agency",
+        "keyword": "Scenario",
+        "name": "Adding Existing person as General Agency Staff to General Agency",
+        "description": "",
+        "line": 42,
+        "type": "scenario",
+        "before": [
+          {
+            "match": {
+              "location": "vendor/bundle/ruby/2.5.0/gems/capybara-3.31.0/lib/capybara/cucumber.rb:14"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 11600
+            }
+          },
+          {
+            "match": {
+              "location": "vendor/bundle/ruby/2.5.0/gems/capybara-3.31.0/lib/capybara/cucumber.rb:22"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 9300
+            }
+          },
+          {
+            "match": {
+              "location": "vendor/bundle/ruby/2.5.0/gems/email_spec-2.2.0/lib/email_spec/cucumber.rb:10"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 166401
+            }
+          },
+          {
+            "match": {
+              "location": "vendor/bundle/ruby/2.5.0/gems/capybara-screenshot-1.0.24/lib/capybara-screenshot/cucumber.rb:3"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 18700
+            }
+          },
+          {
+            "match": {
+              "location": "features/support/rails_cache.rb:1"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 23400
+            }
+          },
+          {
+            "match": {
+              "location": "features/support/rails_cache_clear.rb:1"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 19238511
+            }
+          },
+          {
+            "match": {
+              "location": "features/support/screenshots.rb:3"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 40900
+            }
+          }
+        ],
+        "steps": [
+          {
+            "keyword": "Given ",
+            "name": "there is a General Agency exists for District Agency Inc",
+            "line": 43,
+            "match": {
+              "location": "features/support/worlds/general_agency_world.rb:49"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 35041103
+            },
+            "after": [
+              {
+                "match": {
+                  "location": "features/step_definitions/employer_profile_steps.rb:315"
+                },
+                "result": {
+                  "status": "passed",
+                  "duration": 16100
+                }
+              }
+            ]
+          },
+          {
+            "keyword": "Given ",
+            "name": "general agency feature is enabled",
+            "line": 44,
+            "match": {
+              "location": "features/step_definitions/general_agency_steps.rb:3"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 96300
+            },
+            "after": [
+              {
+                "match": {
+                  "location": "features/step_definitions/employer_profile_steps.rb:315"
+                },
+                "result": {
+                  "status": "passed",
+                  "duration": 8600
+                }
+              }
+            ]
+          },
+          {
+            "keyword": "And ",
+            "name": "the staff Max Planck is primary ga staff for District Agency Inc",
+            "line": 45,
+            "match": {
+              "location": "features/support/worlds/general_agency_world.rb:55"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 197266838
+            },
+            "after": [
+              {
+                "match": {
+                  "location": "features/step_definitions/employer_profile_steps.rb:315"
+                },
+                "result": {
+                  "status": "passed",
+                  "duration": 14900
+                }
+              }
+            ]
+          },
+          {
+            "keyword": "And ",
+            "name": "person record exists for John Doe",
+            "line": 46,
+            "match": {
+              "location": "features/support/worlds/broker_agency_world.rb:162"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 63332965
+            },
+            "after": [
+              {
+                "match": {
+                  "location": "features/step_definitions/employer_profile_steps.rb:315"
+                },
+                "result": {
+                  "status": "passed",
+                  "duration": 15200
+                }
+              }
+            ]
+          },
+          {
+            "keyword": "And ",
+            "name": "Max Planck logs on to the General Agency Portal",
+            "line": 47,
+            "match": {
+              "location": "features/step_definitions/integration_steps.rb:444"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 952163293
+            },
+            "after": [
+              {
+                "match": {
+                  "location": "features/step_definitions/employer_profile_steps.rb:315"
+                },
+                "result": {
+                  "status": "passed",
+                  "duration": 16800
+                }
+              }
+            ]
+          },
+          {
+            "keyword": "And ",
+            "name": "the primary staff clicks on the “Add General Agency Staff Role” button",
+            "line": 48,
+            "match": {
+              "location": "features/step_definitions/ga_staff_steps.rb:85"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 112709950
+            },
+            "after": [
+              {
+                "match": {
+                  "location": "features/step_definitions/employer_profile_steps.rb:315"
+                },
+                "result": {
+                  "status": "passed",
+                  "duration": 19000
+                }
+              }
+            ]
+          },
+          {
+            "keyword": "And ",
+            "name": "a form appears that requires the primary staff to input First Name, Last Name, and DOB to submit",
+            "line": 49,
+            "match": {
+              "location": "features/step_definitions/ga_staff_steps.rb:89"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 122689307
+            },
+            "after": [
+              {
+                "match": {
+                  "location": "features/step_definitions/employer_profile_steps.rb:315"
+                },
+                "result": {
+                  "status": "passed",
+                  "duration": 24200
+                }
+              }
+            ]
+          },
+          {
+            "keyword": "When ",
+            "name": "the primary staff enters the First Name, Last Name, and DOB of existing user John Doe",
+            "line": 50,
+            "match": {
+              "location": "features/step_definitions/ga_staff_steps.rb:95"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 230152327
+            },
+            "after": [
+              {
+                "match": {
+                  "location": "features/step_definitions/employer_profile_steps.rb:315"
+                },
+                "result": {
+                  "status": "passed",
+                  "duration": 27001
+                }
+              }
+            ]
+          },
+          {
+            "keyword": "Then ",
+            "name": "the primary staff will be given a general agency staff role with the given General Agency Agency",
+            "line": 51,
+            "match": {
+              "location": "features/step_definitions/ga_staff_steps.rb:102"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 393024767
+            },
+            "after": [
+              {
+                "match": {
+                  "location": "features/step_definitions/employer_profile_steps.rb:315"
+                },
+                "result": {
+                  "status": "passed",
+                  "duration": 26500
+                }
+              }
+            ]
+          },
+          {
+            "keyword": "And ",
+            "name": "the primary staff will now appear within the “General Agency Staff” table as Active and Linked",
+            "line": 52,
+            "match": {
+              "location": "features/step_definitions/ga_staff_steps.rb:106"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 127669937
+            },
+            "after": [
+              {
+                "match": {
+                  "location": "features/step_definitions/employer_profile_steps.rb:315"
+                },
+                "result": {
+                  "status": "passed",
+                  "duration": 64900
+                }
+              }
+            ]
+          }
+        ],
+        "after": [
+          {
+            "match": {
+              "location": "features/support/warden.rb:3"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 23800
+            }
+          },
+          {
+            "match": {
+              "location": "features/support/user_cleanup.rb:1"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 9684456
+            }
+          },
+          {
+            "match": {
+              "location": "vendor/bundle/ruby/2.5.0/gems/capybara-screenshot-1.0.24/lib/capybara-screenshot/cucumber.rb:7"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 11000
+            }
+          },
+          {
+            "match": {
+              "location": "vendor/bundle/ruby/2.5.0/gems/email_spec-2.2.0/lib/email_spec/cucumber.rb:19"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 12400
+            }
+          },
+          {
+            "match": {
+              "location": "vendor/bundle/ruby/2.5.0/gems/capybara-3.31.0/lib/capybara/cucumber.rb:10"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 39011425
+            }
+          }
+        ]
+      },
+      {
+        "id": "assign-general-agency-staff-to-general-agency;adding-non-existing-person-as-general-agency-staff-to-general-agency",
+        "keyword": "Scenario",
+        "name": "Adding Non Existing person as General Agency Staff to General Agency",
+        "description": "",
+        "line": 54,
+        "type": "scenario",
+        "before": [
+          {
+            "match": {
+              "location": "vendor/bundle/ruby/2.5.0/gems/capybara-3.31.0/lib/capybara/cucumber.rb:14"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 28300
+            }
+          },
+          {
+            "match": {
+              "location": "vendor/bundle/ruby/2.5.0/gems/capybara-3.31.0/lib/capybara/cucumber.rb:22"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 8700
+            }
+          },
+          {
+            "match": {
+              "location": "vendor/bundle/ruby/2.5.0/gems/email_spec-2.2.0/lib/email_spec/cucumber.rb:10"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 228101
+            }
+          },
+          {
+            "match": {
+              "location": "vendor/bundle/ruby/2.5.0/gems/capybara-screenshot-1.0.24/lib/capybara-screenshot/cucumber.rb:3"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 12100
+            }
+          },
+          {
+            "match": {
+              "location": "features/support/rails_cache.rb:1"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 22700
+            }
+          },
+          {
+            "match": {
+              "location": "features/support/rails_cache_clear.rb:1"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 18698707
+            }
+          },
+          {
+            "match": {
+              "location": "features/support/screenshots.rb:3"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 40800
+            }
+          }
+        ],
+        "steps": [
+          {
+            "keyword": "Given ",
+            "name": "there is a General Agency exists for District Agency Inc",
+            "line": 55,
+            "match": {
+              "location": "features/support/worlds/general_agency_world.rb:49"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 72232617
+            },
+            "after": [
+              {
+                "match": {
+                  "location": "features/step_definitions/employer_profile_steps.rb:315"
+                },
+                "result": {
+                  "status": "passed",
+                  "duration": 14200
+                }
+              }
+            ]
+          },
+          {
+            "keyword": "Given ",
+            "name": "the general agency feature is enabled",
+            "line": 56,
+            "match": {
+              "location": "features/step_definitions/general_agency_steps.rb:3"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 120101
+            },
+            "after": [
+              {
+                "match": {
+                  "location": "features/step_definitions/employer_profile_steps.rb:315"
+                },
+                "result": {
+                  "status": "passed",
+                  "duration": 8000
+                }
+              }
+            ]
+          },
+          {
+            "keyword": "And ",
+            "name": "the staff Max Planck is primary ga staff for District Agency Inc",
+            "line": 58,
+            "match": {
+              "location": "features/support/worlds/general_agency_world.rb:55"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 189842195
+            },
+            "after": [
+              {
+                "match": {
+                  "location": "features/step_definitions/employer_profile_steps.rb:315"
+                },
+                "result": {
+                  "status": "passed",
+                  "duration": 14800
+                }
+              }
+            ]
+          },
+          {
+            "keyword": "And ",
+            "name": "Max Planck logs on to the General Agency Portal",
+            "line": 59,
+            "match": {
+              "location": "features/step_definitions/integration_steps.rb:444"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 937676588
+            },
+            "after": [
+              {
+                "match": {
+                  "location": "features/step_definitions/employer_profile_steps.rb:315"
+                },
+                "result": {
+                  "status": "passed",
+                  "duration": 32001
+                }
+              }
+            ]
+          },
+          {
+            "keyword": "And ",
+            "name": "the primary staff clicks on the “Add General Agency Staff Role” button",
+            "line": 60,
+            "match": {
+              "location": "features/step_definitions/ga_staff_steps.rb:85"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 90219751
+            },
+            "after": [
+              {
+                "match": {
+                  "location": "features/step_definitions/employer_profile_steps.rb:315"
+                },
+                "result": {
+                  "status": "passed",
+                  "duration": 20200
+                }
+              }
+            ]
+          },
+          {
+            "keyword": "And ",
+            "name": "a form appears that requires the primary staff to input First Name, Last Name, and DOB to submit",
+            "line": 61,
+            "match": {
+              "location": "features/step_definitions/ga_staff_steps.rb:89"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 80491092
+            },
+            "after": [
+              {
+                "match": {
+                  "location": "features/step_definitions/employer_profile_steps.rb:315"
+                },
+                "result": {
+                  "status": "passed",
+                  "duration": 24600
+                }
+              }
+            ]
+          },
+          {
+            "keyword": "When ",
+            "name": "the primary staff enters the First Name, Last Name, and DOB of an non existing user in EA",
+            "line": 62,
+            "match": {
+              "location": "features/step_definitions/ga_staff_steps.rb:111"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 240870272
+            },
+            "after": [
+              {
+                "match": {
+                  "location": "features/step_definitions/employer_profile_steps.rb:315"
+                },
+                "result": {
+                  "status": "passed",
+                  "duration": 26700
+                }
+              }
+            ]
+          },
+          {
+            "keyword": "Then ",
+            "name": "the primary staff will not be given a general agency staff role with the given General Agency Agency",
+            "line": 63,
+            "match": {
+              "location": "features/step_definitions/ga_staff_steps.rb:117"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 384335748
+            },
+            "after": [
+              {
+                "match": {
+                  "location": "features/step_definitions/employer_profile_steps.rb:315"
+                },
+                "result": {
+                  "status": "passed",
+                  "duration": 40201
+                }
+              }
+            ]
+          }
+        ],
+        "after": [
+          {
+            "match": {
+              "location": "features/support/warden.rb:3"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 22900
+            }
+          },
+          {
+            "match": {
+              "location": "features/support/user_cleanup.rb:1"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 7258645
+            }
+          },
+          {
+            "match": {
+              "location": "vendor/bundle/ruby/2.5.0/gems/capybara-screenshot-1.0.24/lib/capybara-screenshot/cucumber.rb:7"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 9900
+            }
+          },
+          {
+            "match": {
+              "location": "vendor/bundle/ruby/2.5.0/gems/email_spec-2.2.0/lib/email_spec/cucumber.rb:19"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 9900
+            }
+          },
+          {
+            "match": {
+              "location": "vendor/bundle/ruby/2.5.0/gems/capybara-3.31.0/lib/capybara/cucumber.rb:10"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 43850168
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "uri": "features/general_agencies/disabled_general_agency.feature",
+    "id": "general-agency-is-disabled",
+    "keyword": "Feature",
+    "name": "General Agency is disabled",
+    "description": "",
+    "line": 1,
+    "elements": [
+      {
+        "keyword": "Background",
+        "name": "Disable General Agency Feature",
+        "description": "",
+        "line": 2,
+        "type": "background",
+        "before": [
+          {
+            "match": {
+              "location": "vendor/bundle/ruby/2.5.0/gems/capybara-3.31.0/lib/capybara/cucumber.rb:14"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 31001
+            }
+          },
+          {
+            "match": {
+              "location": "vendor/bundle/ruby/2.5.0/gems/capybara-3.31.0/lib/capybara/cucumber.rb:22"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 9500
+            }
+          },
+          {
+            "match": {
+              "location": "vendor/bundle/ruby/2.5.0/gems/email_spec-2.2.0/lib/email_spec/cucumber.rb:10"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 200002
+            }
+          },
+          {
+            "match": {
+              "location": "vendor/bundle/ruby/2.5.0/gems/capybara-screenshot-1.0.24/lib/capybara-screenshot/cucumber.rb:3"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 11000
+            }
+          },
+          {
+            "match": {
+              "location": "features/support/rails_cache.rb:1"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 21400
+            }
+          },
+          {
+            "match": {
+              "location": "features/support/rails_cache_clear.rb:1"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 17526307
+            }
+          },
+          {
+            "match": {
+              "location": "features/support/screenshots.rb:3"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 34600
+            }
+          }
+        ],
+        "steps": [
+          {
+            "keyword": "Given ",
+            "name": "the general agency feature is disabled",
+            "line": 3,
+            "match": {
+              "location": "features/step_definitions/general_agency_steps.rb:7"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2411415
+            },
+            "after": [
+              {
+                "match": {
+                  "location": "features/step_definitions/employer_profile_steps.rb:315"
+                },
+                "result": {
+                  "status": "passed",
+                  "duration": 12500
+                }
+              }
+            ]
+          },
+          {
+            "keyword": "Given ",
+            "name": "all permissions are present",
+            "line": 4,
+            "match": {
+              "location": "features/support/worlds/permissions_world.rb:123"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 160117478
+            },
+            "after": [
+              {
+                "match": {
+                  "location": "features/step_definitions/employer_profile_steps.rb:315"
+                },
+                "result": {
+                  "status": "passed",
+                  "duration": 17900
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "general-agency-is-disabled;main-general-agency-link-is-disabled",
+        "keyword": "Scenario",
+        "name": "Main General Agency Link is Disabled",
+        "description": "",
+        "line": 6,
+        "type": "scenario",
+        "steps": [
+          {
+            "keyword": "When ",
+            "name": "a non logged in user visits the Enroll home page",
+            "line": 7,
+            "match": {
+              "location": "features/step_definitions/integration_steps.rb:13"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 186584640
+            },
+            "after": [
+              {
+                "match": {
+                  "location": "features/step_definitions/employer_profile_steps.rb:315"
+                },
+                "result": {
+                  "status": "passed",
+                  "duration": 26200
+                }
+              }
+            ]
+          },
+          {
+            "keyword": "Then ",
+            "name": "they should not see any General Agency link",
+            "line": 8,
+            "match": {
+              "location": "features/step_definitions/general_agency_steps.rb:33"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 344230503
+            },
+            "after": [
+              {
+                "match": {
+                  "location": "features/step_definitions/employer_profile_steps.rb:315"
+                },
+                "result": {
+                  "status": "passed",
+                  "duration": 21200
+                }
+              }
+            ]
+          }
+        ],
+        "after": [
+          {
+            "match": {
+              "location": "features/support/warden.rb:3"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 21901
+            }
+          },
+          {
+            "match": {
+              "location": "features/support/user_cleanup.rb:1"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1774111
+            }
+          },
+          {
+            "match": {
+              "location": "vendor/bundle/ruby/2.5.0/gems/capybara-screenshot-1.0.24/lib/capybara-screenshot/cucumber.rb:7"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 10201
+            }
+          },
+          {
+            "match": {
+              "location": "vendor/bundle/ruby/2.5.0/gems/email_spec-2.2.0/lib/email_spec/cucumber.rb:19"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 34500
+            }
+          },
+          {
+            "match": {
+              "location": "vendor/bundle/ruby/2.5.0/gems/capybara-3.31.0/lib/capybara/cucumber.rb:10"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 36478323
+            }
+          }
+        ]
+      },
+      {
+        "keyword": "Background",
+        "name": "Disable General Agency Feature",
+        "description": "",
+        "line": 2,
+        "type": "background",
+        "before": [
+          {
+            "match": {
+              "location": "vendor/bundle/ruby/2.5.0/gems/capybara-3.31.0/lib/capybara/cucumber.rb:14"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 11800
+            }
+          },
+          {
+            "match": {
+              "location": "vendor/bundle/ruby/2.5.0/gems/capybara-3.31.0/lib/capybara/cucumber.rb:22"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 8300
+            }
+          },
+          {
+            "match": {
+              "location": "vendor/bundle/ruby/2.5.0/gems/email_spec-2.2.0/lib/email_spec/cucumber.rb:10"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 131601
+            }
+          },
+          {
+            "match": {
+              "location": "vendor/bundle/ruby/2.5.0/gems/capybara-screenshot-1.0.24/lib/capybara-screenshot/cucumber.rb:3"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 10200
+            }
+          },
+          {
+            "match": {
+              "location": "features/support/rails_cache.rb:1"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 42500
+            }
+          },
+          {
+            "match": {
+              "location": "features/support/rails_cache_clear.rb:1"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 18548814
+            }
+          },
+          {
+            "match": {
+              "location": "features/support/screenshots.rb:3"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 38400
+            }
+          }
+        ],
+        "steps": [
+          {
+            "keyword": "Given ",
+            "name": "the general agency feature is disabled",
+            "line": 3,
+            "match": {
+              "location": "features/step_definitions/general_agency_steps.rb:7"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 314502
+            },
+            "after": [
+              {
+                "match": {
+                  "location": "features/step_definitions/employer_profile_steps.rb:315"
+                },
+                "result": {
+                  "status": "passed",
+                  "duration": 12600
+                }
+              }
+            ]
+          },
+          {
+            "keyword": "Given ",
+            "name": "all permissions are present",
+            "line": 4,
+            "match": {
+              "location": "features/support/worlds/permissions_world.rb:123"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 164127402
+            },
+            "after": [
+              {
+                "match": {
+                  "location": "features/step_definitions/employer_profile_steps.rb:315"
+                },
+                "result": {
+                  "status": "passed",
+                  "duration": 18500
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "general-agency-is-disabled;external-routing",
+        "keyword": "Scenario",
+        "name": "External Routing",
+        "description": "",
+        "line": 10,
+        "type": "scenario",
+        "steps": [
+          {
+            "keyword": "When ",
+            "name": "the user types in the GA registration URL",
+            "line": 11,
+            "match": {
+              "location": "features/step_definitions/general_agency_steps.rb:20"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 149717015
+            },
+            "after": [
+              {
+                "match": {
+                  "location": "features/step_definitions/employer_profile_steps.rb:315"
+                },
+                "result": {
+                  "status": "passed",
+                  "duration": 26200
+                }
+              }
+            ]
+          },
+          {
+            "keyword": "Then ",
+            "name": "the user will not be able to access GA Registration page",
+            "line": 12,
+            "match": {
+              "location": "features/step_definitions/general_agency_steps.rb:28"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 74152553
+            },
+            "after": [
+              {
+                "match": {
+                  "location": "features/step_definitions/employer_profile_steps.rb:315"
+                },
+                "result": {
+                  "status": "passed",
+                  "duration": 19700
+                }
+              }
+            ]
+          }
+        ],
+        "after": [
+          {
+            "match": {
+              "location": "features/support/warden.rb:3"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 19801
+            }
+          },
+          {
+            "match": {
+              "location": "features/support/user_cleanup.rb:1"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2295414
+            }
+          },
+          {
+            "match": {
+              "location": "vendor/bundle/ruby/2.5.0/gems/capybara-screenshot-1.0.24/lib/capybara-screenshot/cucumber.rb:7"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 11100
+            }
+          },
+          {
+            "match": {
+              "location": "vendor/bundle/ruby/2.5.0/gems/email_spec-2.2.0/lib/email_spec/cucumber.rb:19"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 8400
+            }
+          },
+          {
+            "match": {
+              "location": "vendor/bundle/ruby/2.5.0/gems/capybara-3.31.0/lib/capybara/cucumber.rb:10"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 36393923
+            }
+          }
+        ]
+      },
+      {
+        "keyword": "Background",
+        "name": "Disable General Agency Feature",
+        "description": "",
+        "line": 2,
+        "type": "background",
+        "before": [
+          {
+            "match": {
+              "location": "vendor/bundle/ruby/2.5.0/gems/capybara-3.31.0/lib/capybara/cucumber.rb:14"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 10800
+            }
+          },
+          {
+            "match": {
+              "location": "vendor/bundle/ruby/2.5.0/gems/capybara-3.31.0/lib/capybara/cucumber.rb:22"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 8400
+            }
+          },
+          {
+            "match": {
+              "location": "vendor/bundle/ruby/2.5.0/gems/email_spec-2.2.0/lib/email_spec/cucumber.rb:10"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 182802
+            }
+          },
+          {
+            "match": {
+              "location": "vendor/bundle/ruby/2.5.0/gems/capybara-screenshot-1.0.24/lib/capybara-screenshot/cucumber.rb:3"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 12000
+            }
+          },
+          {
+            "match": {
+              "location": "features/support/rails_cache.rb:1"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 18600
+            }
+          },
+          {
+            "match": {
+              "location": "features/support/rails_cache_clear.rb:1"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 18020210
+            }
+          },
+          {
+            "match": {
+              "location": "features/support/screenshots.rb:3"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 34700
+            }
+          }
+        ],
+        "steps": [
+          {
+            "keyword": "Given ",
+            "name": "the general agency feature is disabled",
+            "line": 3,
+            "match": {
+              "location": "features/step_definitions/general_agency_steps.rb:7"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 258902
+            },
+            "after": [
+              {
+                "match": {
+                  "location": "features/step_definitions/employer_profile_steps.rb:315"
+                },
+                "result": {
+                  "status": "passed",
+                  "duration": 10400
+                }
+              }
+            ]
+          },
+          {
+            "keyword": "Given ",
+            "name": "all permissions are present",
+            "line": 4,
+            "match": {
+              "location": "features/support/worlds/permissions_world.rb:123"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 152100629
+            },
+            "after": [
+              {
+                "match": {
+                  "location": "features/step_definitions/employer_profile_steps.rb:315"
+                },
+                "result": {
+                  "status": "passed",
+                  "duration": 15200
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "general-agency-is-disabled;hbx-admin-portal-no-general-agencies-link",
+        "keyword": "Scenario",
+        "name": "HBX Admin portal No General Agencies link",
+        "description": "",
+        "line": 14,
+        "type": "scenario",
+        "steps": [
+          {
+            "keyword": "Given ",
+            "name": "that a user with a HBX staff role with HBX staff subrole exists and is logged in",
+            "line": 15,
+            "match": {
+              "location": "features/support/worlds/user_world.rb:84"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 700892182
+            },
+            "after": [
+              {
+                "match": {
+                  "location": "features/step_definitions/employer_profile_steps.rb:315"
+                },
+                "result": {
+                  "status": "passed",
+                  "duration": 17400
+                }
+              }
+            ]
+          },
+          {
+            "keyword": "Given ",
+            "name": "user visits the Hbx Portal",
+            "line": 16,
+            "match": {
+              "location": "features/step_definitions/integration_steps.rb:467"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 10492632942
+            },
+            "after": [
+              {
+                "match": {
+                  "location": "features/step_definitions/employer_profile_steps.rb:315"
+                },
+                "result": {
+                  "status": "passed",
+                  "duration": 25900
+                }
+              }
+            ]
+          },
+          {
+            "keyword": "Then ",
+            "name": "they should not see any General Agency link",
+            "line": 17,
+            "match": {
+              "location": "features/step_definitions/general_agency_steps.rb:33"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 481689869
+            },
+            "after": [
+              {
+                "match": {
+                  "location": "features/step_definitions/employer_profile_steps.rb:315"
+                },
+                "result": {
+                  "status": "passed",
+                  "duration": 24000
+                }
+              }
+            ]
+          }
+        ],
+        "after": [
+          {
+            "match": {
+              "location": "features/support/warden.rb:3"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 21700
+            }
+          },
+          {
+            "match": {
+              "location": "features/support/user_cleanup.rb:1"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 6759743
+            }
+          },
+          {
+            "match": {
+              "location": "vendor/bundle/ruby/2.5.0/gems/capybara-screenshot-1.0.24/lib/capybara-screenshot/cucumber.rb:7"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 10300
+            }
+          },
+          {
+            "match": {
+              "location": "vendor/bundle/ruby/2.5.0/gems/email_spec-2.2.0/lib/email_spec/cucumber.rb:19"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 8000
+            }
+          },
+          {
+            "match": {
+              "location": "vendor/bundle/ruby/2.5.0/gems/capybara-3.31.0/lib/capybara/cucumber.rb:10"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 42812973
+            }
+          }
+        ]
+      },
+      {
+        "keyword": "Background",
+        "name": "Disable General Agency Feature",
+        "description": "",
+        "line": 2,
+        "type": "background",
+        "before": [
+          {
+            "match": {
+              "location": "vendor/bundle/ruby/2.5.0/gems/capybara-3.31.0/lib/capybara/cucumber.rb:14"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 11000
+            }
+          },
+          {
+            "match": {
+              "location": "vendor/bundle/ruby/2.5.0/gems/capybara-3.31.0/lib/capybara/cucumber.rb:22"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 8300
+            }
+          },
+          {
+            "match": {
+              "location": "vendor/bundle/ruby/2.5.0/gems/email_spec-2.2.0/lib/email_spec/cucumber.rb:10"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 168801
+            }
+          },
+          {
+            "match": {
+              "location": "vendor/bundle/ruby/2.5.0/gems/capybara-screenshot-1.0.24/lib/capybara-screenshot/cucumber.rb:3"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 10400
+            }
+          },
+          {
+            "match": {
+              "location": "features/support/rails_cache.rb:1"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 38500
+            }
+          },
+          {
+            "match": {
+              "location": "features/support/rails_cache_clear.rb:1"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 22703645
+            }
+          },
+          {
+            "match": {
+              "location": "features/support/screenshots.rb:3"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 40601
+            }
+          }
+        ],
+        "steps": [
+          {
+            "keyword": "Given ",
+            "name": "the general agency feature is disabled",
+            "line": 3,
+            "match": {
+              "location": "features/step_definitions/general_agency_steps.rb:7"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 300902
+            },
+            "after": [
+              {
+                "match": {
+                  "location": "features/step_definitions/employer_profile_steps.rb:315"
+                },
+                "result": {
+                  "status": "passed",
+                  "duration": 54200
+                }
+              }
+            ]
+          },
+          {
+            "keyword": "Given ",
+            "name": "all permissions are present",
+            "line": 4,
+            "match": {
+              "location": "features/support/worlds/permissions_world.rb:123"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 149559853
+            },
+            "after": [
+              {
+                "match": {
+                  "location": "features/step_definitions/employer_profile_steps.rb:315"
+                },
+                "result": {
+                  "status": "passed",
+                  "duration": 16600
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "general-agency-is-disabled;broker-portal---no-general-agencies-link",
+        "keyword": "Scenario",
+        "name": "Broker portal - No General Agencies Link",
+        "description": "",
+        "line": 19,
+        "type": "scenario",
+        "steps": [
+          {
+            "keyword": "Given ",
+            "name": "there is a Broker Agency exists for District Brokers Inc",
+            "line": 20,
+            "match": {
+              "location": "features/support/worlds/broker_agency_world.rb:97"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 112133914
+            },
+            "after": [
+              {
+                "match": {
+                  "location": "features/step_definitions/employer_profile_steps.rb:315"
+                },
+                "result": {
+                  "status": "passed",
+                  "duration": 14400
+                }
+              }
+            ]
+          },
+          {
+            "keyword": "And ",
+            "name": "the broker Max Planck is primary broker for District Brokers Inc",
+            "line": 21,
+            "match": {
+              "location": "features/support/worlds/broker_agency_world.rb:116"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 146748135
+            },
+            "after": [
+              {
+                "match": {
+                  "location": "features/step_definitions/employer_profile_steps.rb:315"
+                },
+                "result": {
+                  "status": "passed",
+                  "duration": 15200
+                }
+              }
+            ]
+          },
+          {
+            "keyword": "When ",
+            "name": "Max Planck logs on to the Broker Agency Portal",
+            "line": 22,
+            "match": {
+              "location": "features/step_definitions/integration_steps.rb:444"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1153572955
+            },
+            "after": [
+              {
+                "match": {
+                  "location": "features/step_definitions/employer_profile_steps.rb:315"
+                },
+                "result": {
+                  "status": "passed",
+                  "duration": 27200
+                }
+              }
+            ]
+          },
+          {
+            "keyword": "Then ",
+            "name": "they should not see any General Agency link",
+            "line": 24,
+            "comments": [
+              {
+                "value": "# Need to double check there isnt a step after this to wherer the GA link is supposed to be",
+                "line": 23
+              }
+            ],
+            "match": {
+              "location": "features/step_definitions/general_agency_steps.rb:33"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 393184915
+            },
+            "after": [
+              {
+                "match": {
+                  "location": "features/step_definitions/employer_profile_steps.rb:315"
+                },
+                "result": {
+                  "status": "passed",
+                  "duration": 19600
+                }
+              }
+            ]
+          }
+        ],
+        "after": [
+          {
+            "match": {
+              "location": "features/support/warden.rb:3"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 19200
+            }
+          },
+          {
+            "match": {
+              "location": "features/support/user_cleanup.rb:1"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 6564237
+            }
+          },
+          {
+            "match": {
+              "location": "vendor/bundle/ruby/2.5.0/gems/capybara-screenshot-1.0.24/lib/capybara-screenshot/cucumber.rb:7"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 10400
+            }
+          },
+          {
+            "match": {
+              "location": "vendor/bundle/ruby/2.5.0/gems/email_spec-2.2.0/lib/email_spec/cucumber.rb:19"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 8500
+            }
+          },
+          {
+            "match": {
+              "location": "vendor/bundle/ruby/2.5.0/gems/capybara-3.31.0/lib/capybara/cucumber.rb:10"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 43008442
+            }
+          }
+        ]
+      },
+      {
+        "keyword": "Background",
+        "name": "Disable General Agency Feature",
+        "description": "",
+        "line": 2,
+        "type": "background",
+        "before": [
+          {
+            "match": {
+              "location": "vendor/bundle/ruby/2.5.0/gems/capybara-3.31.0/lib/capybara/cucumber.rb:14"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 11600
+            }
+          },
+          {
+            "match": {
+              "location": "vendor/bundle/ruby/2.5.0/gems/capybara-3.31.0/lib/capybara/cucumber.rb:22"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 8700
+            }
+          },
+          {
+            "match": {
+              "location": "vendor/bundle/ruby/2.5.0/gems/email_spec-2.2.0/lib/email_spec/cucumber.rb:10"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 159901
+            }
+          },
+          {
+            "match": {
+              "location": "vendor/bundle/ruby/2.5.0/gems/capybara-screenshot-1.0.24/lib/capybara-screenshot/cucumber.rb:3"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 9900
+            }
+          },
+          {
+            "match": {
+              "location": "features/support/rails_cache.rb:1"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 22300
+            }
+          },
+          {
+            "match": {
+              "location": "features/support/rails_cache_clear.rb:1"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 20321714
+            }
+          },
+          {
+            "match": {
+              "location": "features/support/screenshots.rb:3"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 66700
+            }
+          }
+        ],
+        "steps": [
+          {
+            "keyword": "Given ",
+            "name": "the general agency feature is disabled",
+            "line": 3,
+            "match": {
+              "location": "features/step_definitions/general_agency_steps.rb:7"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 268602
+            },
+            "after": [
+              {
+                "match": {
+                  "location": "features/step_definitions/employer_profile_steps.rb:315"
+                },
+                "result": {
+                  "status": "passed",
+                  "duration": 11200
+                }
+              }
+            ]
+          },
+          {
+            "keyword": "Given ",
+            "name": "all permissions are present",
+            "line": 4,
+            "match": {
+              "location": "features/support/worlds/permissions_world.rb:123"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 192920987
+            },
+            "after": [
+              {
+                "match": {
+                  "location": "features/step_definitions/employer_profile_steps.rb:315"
+                },
+                "result": {
+                  "status": "passed",
+                  "duration": 15500
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "general-agency-is-disabled;bulk-notices-general-agencies-recipient-type",
+        "keyword": "Scenario",
+        "name": "Bulk Notices General Agencies recipient type",
+        "description": "",
+        "line": 26,
+        "type": "scenario",
+        "steps": [
+          {
+            "keyword": "Given ",
+            "name": "the shop market configuration is enabled",
+            "line": 27,
+            "match": {
+              "location": "features/step_definitions/integration_steps.rb:350"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 30598973
+            },
+            "after": [
+              {
+                "match": {
+                  "location": "features/step_definitions/employer_profile_steps.rb:315"
+                },
+                "result": {
+                  "status": "passed",
+                  "duration": 11900
+                }
+              }
+            ]
+          },
+          {
+            "keyword": "Given ",
+            "name": "an HBX admin exists",
+            "line": 28,
+            "match": {
+              "location": "features/support/worlds/hbx_admin.rb:28"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1216338051
+            },
+            "after": [
+              {
+                "match": {
+                  "location": "features/step_definitions/employer_profile_steps.rb:315"
+                },
+                "result": {
+                  "status": "passed",
+                  "duration": 15900
+                }
+              }
+            ]
+          },
+          {
+            "keyword": "And ",
+            "name": "the HBX admin is logged in",
+            "line": 29,
+            "match": {
+              "location": "features/support/worlds/hbx_admin.rb:32"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 551718608
+            },
+            "after": [
+              {
+                "match": {
+                  "location": "features/step_definitions/employer_profile_steps.rb:315"
+                },
+                "result": {
+                  "status": "passed",
+                  "duration": 15800
+                }
+              }
+            ]
+          },
+          {
+            "keyword": "And ",
+            "name": "there is an employer ACME",
+            "line": 30,
+            "match": {
+              "location": "features/support/worlds/employer_world.rb:56"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 49650880
+            },
+            "after": [
+              {
+                "match": {
+                  "location": "features/step_definitions/employer_profile_steps.rb:315"
+                },
+                "result": {
+                  "status": "passed",
+                  "duration": 20401
+                }
+              }
+            ]
+          },
+          {
+            "keyword": "Given ",
+            "name": "Admin is on the new Bulk Notice view",
+            "line": 31,
+            "match": {
+              "location": "features/hbx_admin/step_definitions/bulk_notices_steps.rb:3"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 292884650
+            },
+            "after": [
+              {
+                "match": {
+                  "location": "features/step_definitions/employer_profile_steps.rb:315"
+                },
+                "result": {
+                  "status": "passed",
+                  "duration": 19200
+                }
+              }
+            ]
+          },
+          {
+            "keyword": "Then ",
+            "name": "user should not see General Agencies option for bulk notice",
+            "line": 32,
+            "match": {
+              "location": "features/step_definitions/general_agency_steps.rb:24"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 62032049
+            },
+            "after": [
+              {
+                "match": {
+                  "location": "features/step_definitions/employer_profile_steps.rb:315"
+                },
+                "result": {
+                  "status": "passed",
+                  "duration": 24500
+                }
+              }
+            ]
+          }
+        ],
+        "after": [
+          {
+            "match": {
+              "location": "features/support/warden.rb:3"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 24600
+            }
+          },
+          {
+            "match": {
+              "location": "features/support/user_cleanup.rb:1"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 8446348
+            }
+          },
+          {
+            "match": {
+              "location": "vendor/bundle/ruby/2.5.0/gems/capybara-screenshot-1.0.24/lib/capybara-screenshot/cucumber.rb:7"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 10300
+            }
+          },
+          {
+            "match": {
+              "location": "vendor/bundle/ruby/2.5.0/gems/email_spec-2.2.0/lib/email_spec/cucumber.rb:19"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 8700
+            }
+          },
+          {
+            "match": {
+              "location": "vendor/bundle/ruby/2.5.0/gems/capybara-3.31.0/lib/capybara/cucumber.rb:10"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 33466089
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "uri": "features/general_agencies/ga_registration.feature",
+    "id": "create-a-general-agency-profile",
+    "keyword": "Feature",
+    "name": "Create a General Agency Profile",
+    "description": "",
+    "line": 1,
+    "elements": [
+      {
+        "keyword": "Background",
+        "name": "Enabling proper configuration",
+        "description": "",
+        "line": 3,
+        "type": "background",
+        "before": [
+          {
+            "match": {
+              "location": "vendor/bundle/ruby/2.5.0/gems/capybara-3.31.0/lib/capybara/cucumber.rb:14"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 12200
+            }
+          },
+          {
+            "match": {
+              "location": "vendor/bundle/ruby/2.5.0/gems/capybara-3.31.0/lib/capybara/cucumber.rb:22"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 9800
+            }
+          },
+          {
+            "match": {
+              "location": "vendor/bundle/ruby/2.5.0/gems/email_spec-2.2.0/lib/email_spec/cucumber.rb:10"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 215101
+            }
+          },
+          {
+            "match": {
+              "location": "vendor/bundle/ruby/2.5.0/gems/capybara-screenshot-1.0.24/lib/capybara-screenshot/cucumber.rb:3"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 29200
+            }
+          },
+          {
+            "match": {
+              "location": "features/support/rails_cache.rb:1"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 40401
+            }
+          },
+          {
+            "match": {
+              "location": "features/support/rails_cache_clear.rb:1"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 24993541
+            }
+          },
+          {
+            "match": {
+              "location": "features/support/screenshots.rb:3"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 67801
+            }
+          }
+        ],
+        "steps": [
+          {
+            "keyword": "Given ",
+            "name": "the shop market configuration is enabled",
+            "line": 4,
+            "match": {
+              "location": "features/step_definitions/integration_steps.rb:350"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 34426294
+            },
+            "after": [
+              {
+                "match": {
+                  "location": "features/step_definitions/employer_profile_steps.rb:315"
+                },
+                "result": {
+                  "status": "passed",
+                  "duration": 18700
+                }
+              }
+            ]
+          },
+          {
+            "keyword": "Given ",
+            "name": "a CCA site exists with a benefit market",
+            "line": 5,
+            "match": {
+              "location": "features/support/worlds/site_world.rb:26"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 143106206
+            },
+            "after": [
+              {
+                "match": {
+                  "location": "features/step_definitions/employer_profile_steps.rb:315"
+                },
+                "result": {
+                  "status": "passed",
+                  "duration": 16200
+                }
+              }
+            ]
+          },
+          {
+            "keyword": "Given ",
+            "name": "EnrollRegistry hbx_admin_config feature is enabled",
+            "line": 6,
+            "match": {
+              "location": "features/support/worlds/resource_registry_world.rb:41"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 137100
+            },
+            "after": [
+              {
+                "match": {
+                  "location": "features/step_definitions/employer_profile_steps.rb:315"
+                },
+                "result": {
+                  "status": "passed",
+                  "duration": 8500
+                }
+              }
+            ]
+          },
+          {
+            "keyword": "Given ",
+            "name": "EnrollRegistry general_agency feature is enabled",
+            "line": 7,
+            "match": {
+              "location": "features/support/worlds/resource_registry_world.rb:41"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 70200
+            },
+            "after": [
+              {
+                "match": {
+                  "location": "features/step_definitions/employer_profile_steps.rb:315"
+                },
+                "result": {
+                  "status": "passed",
+                  "duration": 7900
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "create-a-general-agency-profile;a-general-agency-submits-application",
+        "keyword": "Scenario",
+        "name": "A General Agency Submits Application",
+        "description": "",
+        "line": 9,
+        "type": "scenario",
+        "steps": [
+          {
+            "keyword": "Given ",
+            "name": "a general agency agent visits the DCHBX",
+            "line": 10,
+            "match": {
+              "location": "features/general_agencies/step_definitions/ga_steps.rb:11"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 127507018
+            },
+            "after": [
+              {
+                "match": {
+                  "location": "features/step_definitions/employer_profile_steps.rb:315"
+                },
+                "result": {
+                  "status": "passed",
+                  "duration": 24400
+                }
+              }
+            ]
+          },
+          {
+            "keyword": "When ",
+            "name": "they click the 'New General Agency' button",
+            "line": 11,
+            "match": {
+              "location": "features/general_agencies/step_definitions/ga_steps.rb:37"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 91859817
+            },
+            "after": [
+              {
+                "match": {
+                  "location": "features/step_definitions/employer_profile_steps.rb:315"
+                },
+                "result": {
+                  "status": "passed",
+                  "duration": 21900
+                }
+              }
+            ]
+          },
+          {
+            "keyword": "Then ",
+            "name": "they should see the new general agency form",
+            "line": 12,
+            "match": {
+              "location": "features/general_agencies/step_definitions/ga_steps.rb:41"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 356206706
+            },
+            "after": [
+              {
+                "match": {
+                  "location": "features/step_definitions/employer_profile_steps.rb:315"
+                },
+                "result": {
+                  "status": "passed",
+                  "duration": 45201
+                }
+              }
+            ]
+          },
+          {
+            "keyword": "When ",
+            "name": "they complete the new general agency form and hit the 'Submit' button",
+            "line": 13,
+            "match": {
+              "location": "features/general_agencies/step_definitions/ga_steps.rb:46"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1939384524
+            },
+            "after": [
+              {
+                "match": {
+                  "location": "features/step_definitions/employer_profile_steps.rb:315"
+                },
+                "result": {
+                  "status": "passed",
+                  "duration": 26800
+                }
+              }
+            ]
+          },
+          {
+            "keyword": "Then ",
+            "name": "they should see a confirmation message",
+            "line": 14,
+            "match": {
+              "location": "features/general_agencies/step_definitions/ga_steps.rb:69"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 130360034
+            },
+            "after": [
+              {
+                "match": {
+                  "location": "features/step_definitions/employer_profile_steps.rb:315"
+                },
+                "result": {
+                  "status": "passed",
+                  "duration": 22000
+                }
+              }
+            ]
+          },
+          {
+            "keyword": "And ",
+            "name": "a pending approval status",
+            "line": 15,
+            "match": {
+              "location": "features/general_agencies/step_definitions/ga_steps.rb:73"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 5757832
+            },
+            "after": [
+              {
+                "match": {
+                  "location": "features/step_definitions/employer_profile_steps.rb:315"
+                },
+                "result": {
+                  "status": "passed",
+                  "duration": 13100
+                }
+              }
+            ]
+          }
+        ],
+        "after": [
+          {
+            "match": {
+              "location": "features/support/warden.rb:3"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 21900
+            }
+          },
+          {
+            "match": {
+              "location": "features/support/user_cleanup.rb:1"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1214406
+            }
+          },
+          {
+            "match": {
+              "location": "vendor/bundle/ruby/2.5.0/gems/capybara-screenshot-1.0.24/lib/capybara-screenshot/cucumber.rb:7"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 13200
+            }
+          },
+          {
+            "match": {
+              "location": "vendor/bundle/ruby/2.5.0/gems/email_spec-2.2.0/lib/email_spec/cucumber.rb:19"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 12100
+            }
+          },
+          {
+            "match": {
+              "location": "vendor/bundle/ruby/2.5.0/gems/capybara-3.31.0/lib/capybara/cucumber.rb:10"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 47969870
+            }
+          }
+        ]
+      },
+      {
+        "keyword": "Background",
+        "name": "Enabling proper configuration",
+        "description": "",
+        "line": 3,
+        "type": "background",
+        "before": [
+          {
+            "match": {
+              "location": "vendor/bundle/ruby/2.5.0/gems/capybara-3.31.0/lib/capybara/cucumber.rb:14"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 13000
+            }
+          },
+          {
+            "match": {
+              "location": "vendor/bundle/ruby/2.5.0/gems/capybara-3.31.0/lib/capybara/cucumber.rb:22"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 9100
+            }
+          },
+          {
+            "match": {
+              "location": "vendor/bundle/ruby/2.5.0/gems/email_spec-2.2.0/lib/email_spec/cucumber.rb:10"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 204602
+            }
+          },
+          {
+            "match": {
+              "location": "vendor/bundle/ruby/2.5.0/gems/capybara-screenshot-1.0.24/lib/capybara-screenshot/cucumber.rb:3"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 10700
+            }
+          },
+          {
+            "match": {
+              "location": "features/support/rails_cache.rb:1"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 23400
+            }
+          },
+          {
+            "match": {
+              "location": "features/support/rails_cache_clear.rb:1"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 23650233
+            }
+          },
+          {
+            "match": {
+              "location": "features/support/screenshots.rb:3"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 58300
+            }
+          }
+        ],
+        "steps": [
+          {
+            "keyword": "Given ",
+            "name": "the shop market configuration is enabled",
+            "line": 4,
+            "match": {
+              "location": "features/step_definitions/integration_steps.rb:350"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 28043758
+            },
+            "after": [
+              {
+                "match": {
+                  "location": "features/step_definitions/employer_profile_steps.rb:315"
+                },
+                "result": {
+                  "status": "passed",
+                  "duration": 32100
+                }
+              }
+            ]
+          },
+          {
+            "keyword": "Given ",
+            "name": "a CCA site exists with a benefit market",
+            "line": 5,
+            "match": {
+              "location": "features/support/worlds/site_world.rb:26"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 132308945
+            },
+            "after": [
+              {
+                "match": {
+                  "location": "features/step_definitions/employer_profile_steps.rb:315"
+                },
+                "result": {
+                  "status": "passed",
+                  "duration": 18700
+                }
+              }
+            ]
+          },
+          {
+            "keyword": "Given ",
+            "name": "EnrollRegistry hbx_admin_config feature is enabled",
+            "line": 6,
+            "match": {
+              "location": "features/support/worlds/resource_registry_world.rb:41"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 154401
+            },
+            "after": [
+              {
+                "match": {
+                  "location": "features/step_definitions/employer_profile_steps.rb:315"
+                },
+                "result": {
+                  "status": "passed",
+                  "duration": 13600
+                }
+              }
+            ]
+          },
+          {
+            "keyword": "Given ",
+            "name": "EnrollRegistry general_agency feature is enabled",
+            "line": 7,
+            "match": {
+              "location": "features/support/worlds/resource_registry_world.rb:41"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 62100
+            },
+            "after": [
+              {
+                "match": {
+                  "location": "features/step_definitions/employer_profile_steps.rb:315"
+                },
+                "result": {
+                  "status": "passed",
+                  "duration": 8300
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "create-a-general-agency-profile;a-general-agency-is-approved",
+        "keyword": "Scenario",
+        "name": "A General Agency is Approved",
+        "description": "",
+        "line": 17,
+        "type": "scenario",
+        "steps": [
+          {
+            "keyword": "When ",
+            "name": "that a user with a HBX staff role with HBX Staff subrole exists and is logged in",
+            "line": 18,
+            "match": {
+              "location": "features/support/worlds/user_world.rb:84"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 616294971
+            },
+            "after": [
+              {
+                "match": {
+                  "location": "features/step_definitions/employer_profile_steps.rb:315"
+                },
+                "result": {
+                  "status": "passed",
+                  "duration": 15400
+                }
+              }
+            ]
+          },
+          {
+            "keyword": "And ",
+            "name": "a general agency, pending approval, exists",
+            "line": 19,
+            "match": {
+              "location": "features/support/worlds/general_agency_world.rb:59"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 132207444
+            },
+            "after": [
+              {
+                "match": {
+                  "location": "features/step_definitions/employer_profile_steps.rb:315"
+                },
+                "result": {
+                  "status": "passed",
+                  "duration": 15800
+                }
+              }
+            ]
+          },
+          {
+            "keyword": "And ",
+            "name": "Hbx Admin is on Broker Index of the Admin Dashboard",
+            "line": 20,
+            "match": {
+              "location": "features/support/worlds/broker_agency_world.rb:139"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 396884535
+            },
+            "after": [
+              {
+                "match": {
+                  "location": "features/step_definitions/employer_profile_steps.rb:315"
+                },
+                "result": {
+                  "status": "passed",
+                  "duration": 24700
+                }
+              }
+            ]
+          },
+          {
+            "keyword": "And ",
+            "name": "Hbx Admin is on Broker Index and clicks General Agencies",
+            "line": 21,
+            "match": {
+              "location": "features/general_agencies/step_definitions/ga_steps.rb:83"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 322047814
+            },
+            "after": [
+              {
+                "match": {
+                  "location": "features/step_definitions/employer_profile_steps.rb:315"
+                },
+                "result": {
+                  "status": "passed",
+                  "duration": 25701
+                }
+              }
+            ]
+          },
+          {
+            "keyword": "Then ",
+            "name": "they should see the pending general agency",
+            "line": 22,
+            "match": {
+              "location": "features/general_agencies/step_definitions/ga_steps.rb:87"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 111403450
+            },
+            "after": [
+              {
+                "match": {
+                  "location": "features/step_definitions/employer_profile_steps.rb:315"
+                },
+                "result": {
+                  "status": "passed",
+                  "duration": 26700
+                }
+              }
+            ]
+          },
+          {
+            "keyword": "When ",
+            "name": "they click the link of general agency",
+            "line": 23,
+            "match": {
+              "location": "features/general_agencies/step_definitions/ga_steps.rb:92"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 123486451
+            },
+            "after": [
+              {
+                "match": {
+                  "location": "features/step_definitions/employer_profile_steps.rb:315"
+                },
+                "result": {
+                  "status": "passed",
+                  "duration": 17400
+                }
+              }
+            ]
+          },
+          {
+            "keyword": "Then ",
+            "name": "they should see the home of general agency",
+            "line": 24,
+            "match": {
+              "location": "features/general_agencies/step_definitions/ga_steps.rb:96"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 185708930
+            },
+            "after": [
+              {
+                "match": {
+                  "location": "features/step_definitions/employer_profile_steps.rb:315"
+                },
+                "result": {
+                  "status": "passed",
+                  "duration": 25101
+                }
+              }
+            ]
+          },
+          {
+            "keyword": "When ",
+            "name": "they visit the list of staff",
+            "line": 25,
+            "match": {
+              "location": "features/general_agencies/step_definitions/ga_steps.rb:101"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 95147679
+            },
+            "after": [
+              {
+                "match": {
+                  "location": "features/step_definitions/employer_profile_steps.rb:315"
+                },
+                "result": {
+                  "status": "passed",
+                  "duration": 17300
+                }
+              }
+            ]
+          },
+          {
+            "keyword": "Then ",
+            "name": "they should see the name of staff",
+            "line": 26,
+            "match": {
+              "location": "features/support/worlds/general_agency_world.rb:65"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 415487427
+            },
+            "after": [
+              {
+                "match": {
+                  "location": "features/step_definitions/employer_profile_steps.rb:315"
+                },
+                "result": {
+                  "status": "passed",
+                  "duration": 17000
+                }
+              }
+            ]
+          },
+          {
+            "keyword": "When ",
+            "name": "they approve the general agency",
+            "line": 27,
+            "match": {
+              "location": "features/general_agencies/step_definitions/ga_steps.rb:105"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 396353111
+            },
+            "after": [
+              {
+                "match": {
+                  "location": "features/step_definitions/employer_profile_steps.rb:315"
+                },
+                "result": {
+                  "status": "passed",
+                  "duration": 24001
+                }
+              }
+            ]
+          },
+          {
+            "keyword": "Then ",
+            "name": "they should see updated status",
+            "line": 28,
+            "match": {
+              "location": "features/general_agencies/step_definitions/ga_steps.rb:110"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 67201109
+            },
+            "after": [
+              {
+                "match": {
+                  "location": "features/step_definitions/employer_profile_steps.rb:315"
+                },
+                "result": {
+                  "status": "passed",
+                  "duration": 30800
+                }
+              }
+            ]
+          },
+          {
+            "keyword": "And ",
+            "name": "the general agency should receive an email",
+            "line": 29,
+            "match": {
+              "location": "features/support/worlds/general_agency_world.rb:75"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 8315151
+            },
+            "after": [
+              {
+                "match": {
+                  "location": "features/step_definitions/employer_profile_steps.rb:315"
+                },
+                "result": {
+                  "status": "passed",
+                  "duration": 15100
+                }
+              }
+            ]
+          }
+        ],
+        "after": [
+          {
+            "match": {
+              "location": "features/support/warden.rb:3"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 20500
+            }
+          },
+          {
+            "match": {
+              "location": "features/support/user_cleanup.rb:1"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 10182462
+            }
+          },
+          {
+            "match": {
+              "location": "vendor/bundle/ruby/2.5.0/gems/capybara-screenshot-1.0.24/lib/capybara-screenshot/cucumber.rb:7"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 10000
+            }
+          },
+          {
+            "match": {
+              "location": "vendor/bundle/ruby/2.5.0/gems/email_spec-2.2.0/lib/email_spec/cucumber.rb:19"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 9200
+            }
+          },
+          {
+            "match": {
+              "location": "vendor/bundle/ruby/2.5.0/gems/capybara-3.31.0/lib/capybara/cucumber.rb:10"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 44245969
+            }
+          }
+        ]
+      },
+      {
+        "keyword": "Background",
+        "name": "Enabling proper configuration",
+        "description": "",
+        "line": 3,
+        "type": "background",
+        "before": [
+          {
+            "match": {
+              "location": "vendor/bundle/ruby/2.5.0/gems/capybara-3.31.0/lib/capybara/cucumber.rb:14"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 11701
+            }
+          },
+          {
+            "match": {
+              "location": "vendor/bundle/ruby/2.5.0/gems/capybara-3.31.0/lib/capybara/cucumber.rb:22"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 8600
+            }
+          },
+          {
+            "match": {
+              "location": "vendor/bundle/ruby/2.5.0/gems/email_spec-2.2.0/lib/email_spec/cucumber.rb:10"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 238702
+            }
+          },
+          {
+            "match": {
+              "location": "vendor/bundle/ruby/2.5.0/gems/capybara-screenshot-1.0.24/lib/capybara-screenshot/cucumber.rb:3"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 27800
+            }
+          },
+          {
+            "match": {
+              "location": "features/support/rails_cache.rb:1"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 23000
+            }
+          },
+          {
+            "match": {
+              "location": "features/support/rails_cache_clear.rb:1"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 27129465
+            }
+          },
+          {
+            "match": {
+              "location": "features/support/screenshots.rb:3"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 50900
+            }
+          }
+        ],
+        "steps": [
+          {
+            "keyword": "Given ",
+            "name": "the shop market configuration is enabled",
+            "line": 4,
+            "match": {
+              "location": "features/step_definitions/integration_steps.rb:350"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 27218165
+            },
+            "after": [
+              {
+                "match": {
+                  "location": "features/step_definitions/employer_profile_steps.rb:315"
+                },
+                "result": {
+                  "status": "passed",
+                  "duration": 15500
+                }
+              }
+            ]
+          },
+          {
+            "keyword": "Given ",
+            "name": "a CCA site exists with a benefit market",
+            "line": 5,
+            "match": {
+              "location": "features/support/worlds/site_world.rb:26"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 136494530
+            },
+            "after": [
+              {
+                "match": {
+                  "location": "features/step_definitions/employer_profile_steps.rb:315"
+                },
+                "result": {
+                  "status": "passed",
+                  "duration": 16800
+                }
+              }
+            ]
+          },
+          {
+            "keyword": "Given ",
+            "name": "EnrollRegistry hbx_admin_config feature is enabled",
+            "line": 6,
+            "match": {
+              "location": "features/support/worlds/resource_registry_world.rb:41"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 119701
+            },
+            "after": [
+              {
+                "match": {
+                  "location": "features/step_definitions/employer_profile_steps.rb:315"
+                },
+                "result": {
+                  "status": "passed",
+                  "duration": 9100
+                }
+              }
+            ]
+          },
+          {
+            "keyword": "Given ",
+            "name": "EnrollRegistry general_agency feature is enabled",
+            "line": 7,
+            "match": {
+              "location": "features/support/worlds/resource_registry_world.rb:41"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 91700
+            },
+            "after": [
+              {
+                "match": {
+                  "location": "features/step_definitions/employer_profile_steps.rb:315"
+                },
+                "result": {
+                  "status": "passed",
+                  "duration": 7600
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "create-a-general-agency-profile;a-general-agency-creates-an-account",
+        "keyword": "Scenario",
+        "name": "A General Agency Creates an Account",
+        "description": "",
+        "line": 31,
+        "type": "scenario",
+        "steps": [
+          {
+            "keyword": "Given ",
+            "name": "a general agency, approved, awaiting account creation, exists",
+            "line": 32,
+            "match": {
+              "location": "features/support/worlds/general_agency_world.rb:80"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 158665465
+            },
+            "after": [
+              {
+                "match": {
+                  "location": "features/step_definitions/employer_profile_steps.rb:315"
+                },
+                "result": {
+                  "status": "passed",
+                  "duration": 14300
+                }
+              }
+            ]
+          },
+          {
+            "keyword": "When ",
+            "name": "the HBX admin visits the link received in the approval email",
+            "line": 33,
+            "match": {
+              "location": "features/support/worlds/general_agency_world.rb:87"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 265474515
+            },
+            "after": [
+              {
+                "match": {
+                  "location": "features/step_definitions/employer_profile_steps.rb:315"
+                },
+                "result": {
+                  "status": "passed",
+                  "duration": 42100
+                }
+              }
+            ]
+          },
+          {
+            "keyword": "Then ",
+            "name": "they should see an account creation form",
+            "line": 34,
+            "match": {
+              "location": "features/general_agencies/step_definitions/ga_steps.rb:115"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 30066883
+            },
+            "after": [
+              {
+                "match": {
+                  "location": "features/step_definitions/employer_profile_steps.rb:315"
+                },
+                "result": {
+                  "status": "passed",
+                  "duration": 35600
+                }
+              }
+            ]
+          },
+          {
+            "keyword": "When ",
+            "name": "they complete the account creation form and hit the 'Submit' button",
+            "line": 35,
+            "match": {
+              "location": "features/general_agencies/step_definitions/ga_steps.rb:121"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 859296025
+            },
+            "after": [
+              {
+                "match": {
+                  "location": "features/step_definitions/employer_profile_steps.rb:315"
+                },
+                "result": {
+                  "status": "passed",
+                  "duration": 24100
+                }
+              }
+            ]
+          },
+          {
+            "keyword": "Then ",
+            "name": "they should see a welcome message",
+            "line": 36,
+            "match": {
+              "location": "features/general_agencies/step_definitions/ga_steps.rb:129"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 80451489
+            },
+            "after": [
+              {
+                "match": {
+                  "location": "features/step_definitions/employer_profile_steps.rb:315"
+                },
+                "result": {
+                  "status": "passed",
+                  "duration": 25900
+                }
+              }
+            ]
+          },
+          {
+            "keyword": "And ",
+            "name": "they see the General Agency homepage",
+            "line": 37,
+            "match": {
+              "location": "features/general_agencies/step_definitions/ga_steps.rb:134"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 78198175
+            },
+            "after": [
+              {
+                "match": {
+                  "location": "features/step_definitions/employer_profile_steps.rb:315"
+                },
+                "result": {
+                  "status": "passed",
+                  "duration": 24800
+                }
+              }
+            ]
+          }
+        ],
+        "after": [
+          {
+            "match": {
+              "location": "features/support/warden.rb:3"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 27901
+            }
+          },
+          {
+            "match": {
+              "location": "features/support/user_cleanup.rb:1"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 8040749
+            }
+          },
+          {
+            "match": {
+              "location": "vendor/bundle/ruby/2.5.0/gems/capybara-screenshot-1.0.24/lib/capybara-screenshot/cucumber.rb:7"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 57901
+            }
+          },
+          {
+            "match": {
+              "location": "vendor/bundle/ruby/2.5.0/gems/email_spec-2.2.0/lib/email_spec/cucumber.rb:19"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 12200
+            }
+          },
+          {
+            "match": {
+              "location": "vendor/bundle/ruby/2.5.0/gems/capybara-3.31.0/lib/capybara/cucumber.rb:10"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 39099038
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "uri": "features/general_agencies/update_general_agency_profile.feature",
+    "id": "update-general-agency-profile",
+    "keyword": "Feature",
+    "name": "update general agency profile",
+    "description": "",
+    "line": 1,
+    "elements": [
+      {
+        "id": "update-general-agency-profile;reactivating-general-agency-staff-role",
+        "keyword": "Scenario",
+        "name": "Reactivating General Agency Staff Role",
+        "description": "",
+        "line": 27,
+        "type": "scenario",
+        "comments": [
+          {
+            "value": "# Background: A general agency clicks on edit general agency and updates information",
+            "line": 3
+          },
+          {
+            "value": "# Given a CCA site exists with a benefit market",
+            "line": 4
+          },
+          {
+            "value": "# Given all permissions are present",
+            "line": 5
+          },
+          {
+            "value": "# Given a general agency, approved, confirmed, exists",
+            "line": 6
+          },
+          {
+            "value": "# And the ga login in",
+            "line": 7
+          },
+          {
+            "value": "# And the ga should see the home of ga",
+            "line": 8
+          },
+          {
+            "value": "# Scenario: A general agency updated information",
+            "line": 10
+          },
+          {
+            "value": "# When the ga clicks on EDIT GENERAL AGENCY button/link",
+            "line": 11
+          },
+          {
+            "value": "# Then the ga should see ga profile form to update informaton",
+            "line": 12
+          },
+          {
+            "value": "# When the ga enters personal information or general agency information or office location",
+            "line": 13
+          },
+          {
+            "value": "# And the ga clicks update general agency",
+            "line": 14
+          },
+          {
+            "value": "# Then the ga should see successful message.",
+            "line": 15
+          },
+          {
+            "value": "# Scenario: A general agency check for updated information",
+            "line": 17
+          },
+          {
+            "value": "# When the ga clicks on EDIT GENERAL AGENCY button/link",
+            "line": 18
+          },
+          {
+            "value": "# Then the ga should see ga profile form to update informaton",
+            "line": 19
+          },
+          {
+            "value": "# When the ga enters personal information or general agency information or office location",
+            "line": 20
+          },
+          {
+            "value": "# And the ga clicks update general agency",
+            "line": 21
+          },
+          {
+            "value": "# Then the ga should see successful message.",
+            "line": 22
+          },
+          {
+            "value": "# And the ga should see updated informaton on page",
+            "line": 23
+          },
+          {
+            "value": "# When the ga clicks on EDIT GENERAL AGENCY button/link",
+            "line": 24
+          },
+          {
+            "value": "# Then the ga should see updated informaton on page",
+            "line": 25
+          }
+        ],
+        "before": [
+          {
+            "match": {
+              "location": "vendor/bundle/ruby/2.5.0/gems/capybara-3.31.0/lib/capybara/cucumber.rb:14"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 12001
+            }
+          },
+          {
+            "match": {
+              "location": "vendor/bundle/ruby/2.5.0/gems/capybara-3.31.0/lib/capybara/cucumber.rb:22"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 9300
+            }
+          },
+          {
+            "match": {
+              "location": "vendor/bundle/ruby/2.5.0/gems/email_spec-2.2.0/lib/email_spec/cucumber.rb:10"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 183801
+            }
+          },
+          {
+            "match": {
+              "location": "vendor/bundle/ruby/2.5.0/gems/capybara-screenshot-1.0.24/lib/capybara-screenshot/cucumber.rb:3"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 12500
+            }
+          },
+          {
+            "match": {
+              "location": "features/support/rails_cache.rb:1"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 23100
+            }
+          },
+          {
+            "match": {
+              "location": "features/support/rails_cache_clear.rb:1"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 26933164
+            }
+          },
+          {
+            "match": {
+              "location": "features/support/screenshots.rb:3"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 68200
+            }
+          }
+        ],
+        "steps": [
+          {
+            "keyword": "Given ",
+            "name": "a CCA site exists with a benefit market",
+            "line": 28,
+            "match": {
+              "location": "features/support/worlds/site_world.rb:26"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 138226041
+            },
+            "after": [
+              {
+                "match": {
+                  "location": "features/step_definitions/employer_profile_steps.rb:315"
+                },
+                "result": {
+                  "status": "passed",
+                  "duration": 18500
+                }
+              }
+            ]
+          },
+          {
+            "keyword": "Given ",
+            "name": "the general agency feature is enabled",
+            "line": 29,
+            "match": {
+              "location": "features/step_definitions/general_agency_steps.rb:3"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 111801
+            },
+            "after": [
+              {
+                "match": {
+                  "location": "features/step_definitions/employer_profile_steps.rb:315"
+                },
+                "result": {
+                  "status": "passed",
+                  "duration": 8500
+                }
+              }
+            ]
+          },
+          {
+            "keyword": "Given ",
+            "name": "all permissions are present",
+            "line": 31,
+            "match": {
+              "location": "features/support/worlds/permissions_world.rb:123"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 130471693
+            },
+            "after": [
+              {
+                "match": {
+                  "location": "features/step_definitions/employer_profile_steps.rb:315"
+                },
+                "result": {
+                  "status": "passed",
+                  "duration": 18000
+                }
+              }
+            ]
+          },
+          {
+            "keyword": "Given ",
+            "name": "there is a General Agency exists for District Agency Inc",
+            "line": 32,
+            "match": {
+              "location": "features/support/worlds/general_agency_world.rb:49"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 26624562
+            },
+            "after": [
+              {
+                "match": {
+                  "location": "features/step_definitions/employer_profile_steps.rb:315"
+                },
+                "result": {
+                  "status": "passed",
+                  "duration": 16000
+                }
+              }
+            ]
+          },
+          {
+            "keyword": "And ",
+            "name": "the staff Max Planck is primary ga staff for District Agency Inc",
+            "line": 33,
+            "match": {
+              "location": "features/support/worlds/general_agency_world.rb:55"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 241952572
+            },
+            "after": [
+              {
+                "match": {
+                  "location": "features/step_definitions/employer_profile_steps.rb:315"
+                },
+                "result": {
+                  "status": "passed",
+                  "duration": 16200
+                }
+              }
+            ]
+          },
+          {
+            "keyword": "And ",
+            "name": "person record exists for John Doe",
+            "line": 34,
+            "match": {
+              "location": "features/support/worlds/broker_agency_world.rb:162"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 65140096
+            },
+            "after": [
+              {
+                "match": {
+                  "location": "features/step_definitions/employer_profile_steps.rb:315"
+                },
+                "result": {
+                  "status": "passed",
+                  "duration": 15600
+                }
+              }
+            ]
+          },
+          {
+            "keyword": "And ",
+            "name": "Max Planck logs on to the General Agency Portal",
+            "line": 35,
+            "match": {
+              "location": "features/step_definitions/integration_steps.rb:444"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 961457147
+            },
+            "after": [
+              {
+                "match": {
+                  "location": "features/step_definitions/employer_profile_steps.rb:315"
+                },
+                "result": {
+                  "status": "passed",
+                  "duration": 16800
+                }
+              }
+            ]
+          },
+          {
+            "keyword": "And ",
+            "name": "the primary staff clicks on the “Add General Agency Staff Role” button",
+            "line": 36,
+            "match": {
+              "location": "features/step_definitions/ga_staff_steps.rb:85"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 93133266
+            },
+            "after": [
+              {
+                "match": {
+                  "location": "features/step_definitions/employer_profile_steps.rb:315"
+                },
+                "result": {
+                  "status": "passed",
+                  "duration": 18300
+                }
+              }
+            ]
+          },
+          {
+            "keyword": "And ",
+            "name": "a form appears that requires the primary staff to input First Name, Last Name, and DOB to submit",
+            "line": 37,
+            "match": {
+              "location": "features/step_definitions/ga_staff_steps.rb:89"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 88041036
+            },
+            "after": [
+              {
+                "match": {
+                  "location": "features/step_definitions/employer_profile_steps.rb:315"
+                },
+                "result": {
+                  "status": "passed",
+                  "duration": 22200
+                }
+              }
+            ]
+          },
+          {
+            "keyword": "When ",
+            "name": "the primary staff enters the First Name, Last Name, and DOB of existing user John Doe",
+            "line": 38,
+            "match": {
+              "location": "features/step_definitions/ga_staff_steps.rb:95"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 287956851
+            },
+            "after": [
+              {
+                "match": {
+                  "location": "features/step_definitions/employer_profile_steps.rb:315"
+                },
+                "result": {
+                  "status": "passed",
+                  "duration": 26400
+                }
+              }
+            ]
+          },
+          {
+            "keyword": "Then ",
+            "name": "the primary staff will be given a general agency staff role with the given General Agency Agency",
+            "line": 39,
+            "match": {
+              "location": "features/step_definitions/ga_staff_steps.rb:102"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 418880347
+            },
+            "after": [
+              {
+                "match": {
+                  "location": "features/step_definitions/employer_profile_steps.rb:315"
+                },
+                "result": {
+                  "status": "passed",
+                  "duration": 24000
+                }
+              }
+            ]
+          },
+          {
+            "keyword": "And ",
+            "name": "the primary staff will now appear within the “General Agency Staff” table as Active and Linked",
+            "line": 40,
+            "match": {
+              "location": "features/step_definitions/ga_staff_steps.rb:106"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 181744205
+            },
+            "after": [
+              {
+                "match": {
+                  "location": "features/step_definitions/employer_profile_steps.rb:315"
+                },
+                "result": {
+                  "status": "passed",
+                  "duration": 25200
+                }
+              }
+            ]
+          },
+          {
+            "keyword": "And ",
+            "name": "user clicks the trash icon to remove a general agency role",
+            "line": 42,
+            "comments": [
+              {
+                "value": "# Given that a user with a HBX staff role with Super Admin subrole exists and is logged in",
+                "line": 41
+              }
+            ],
+            "match": {
+              "location": "features/general_agencies/step_definitions/ga_steps.rb:15"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 468677251
+            },
+            "after": [
+              {
+                "match": {
+                  "location": "features/step_definitions/employer_profile_steps.rb:315"
+                },
+                "result": {
+                  "status": "passed",
+                  "duration": 33500
+                }
+              }
+            ]
+          },
+          {
+            "keyword": "And ",
+            "name": "user clicks Add General Agency Staff Role",
+            "line": 43,
+            "match": {
+              "location": "features/general_agencies/step_definitions/ga_steps.rb:20"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 197818604
+            },
+            "after": [
+              {
+                "match": {
+                  "location": "features/step_definitions/employer_profile_steps.rb:315"
+                },
+                "result": {
+                  "status": "passed",
+                  "duration": 17400
+                }
+              }
+            ]
+          },
+          {
+            "keyword": "And ",
+            "name": "user enters information for that terminated general agency staff and clicks save",
+            "line": 44,
+            "match": {
+              "location": "features/general_agencies/step_definitions/ga_steps.rb:29"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 738468491
+            },
+            "after": [
+              {
+                "match": {
+                  "location": "features/step_definitions/employer_profile_steps.rb:315"
+                },
+                "result": {
+                  "status": "passed",
+                  "duration": 25300
+                }
+              }
+            ]
+          },
+          {
+            "keyword": "Then ",
+            "name": "the terminated general agency staff role will be reactivated",
+            "line": 45,
+            "match": {
+              "location": "features/general_agencies/step_definitions/ga_steps.rb:24"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 4398926
+            },
+            "after": [
+              {
+                "match": {
+                  "location": "features/step_definitions/employer_profile_steps.rb:315"
+                },
+                "result": {
+                  "status": "passed",
+                  "duration": 11700
+                }
+              }
+            ]
+          }
+        ],
+        "after": [
+          {
+            "match": {
+              "location": "features/support/warden.rb:3"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 37001
+            }
+          },
+          {
+            "match": {
+              "location": "features/support/user_cleanup.rb:1"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 8872354
+            }
+          },
+          {
+            "match": {
+              "location": "vendor/bundle/ruby/2.5.0/gems/capybara-screenshot-1.0.24/lib/capybara-screenshot/cucumber.rb:7"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 9301
+            }
+          },
+          {
+            "match": {
+              "location": "vendor/bundle/ruby/2.5.0/gems/email_spec-2.2.0/lib/email_spec/cucumber.rb:19"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 8700
+            }
+          },
+          {
+            "match": {
+              "location": "vendor/bundle/ruby/2.5.0/gems/capybara-3.31.0/lib/capybara/cucumber.rb:10"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 44759672
+            }
+          }
+        ]
+      }
+    ]
+  }
+]
