@@ -99,7 +99,6 @@ const concat_cucumber_reports_1 = __nccwpck_require__(9251);
 const fs_1 = __nccwpck_require__(5747);
 const move_cucumber_reports_1 = __nccwpck_require__(532);
 const report_to_runtime_1 = __nccwpck_require__(1588);
-const runtime_details_1 = __nccwpck_require__(2271);
 const folder_names_1 = __nccwpck_require__(9885);
 async function run() {
     const individualReportsFolder = core.getInput('individual-reports-folder');
@@ -136,7 +135,7 @@ async function run() {
     const cucumberReport = JSON.parse(cucumberReportString);
     const files = (0, report_to_runtime_1.reportToRuntime)(cucumberReport);
     const splitConfig = (0, split_config_generator_1.createSplitConfig)(files);
-    const details = (0, runtime_details_1.runtimeDetails)(files);
+    const details = (0, split_config_generator_1.runtimeDetails)(files);
     // eslint-disable-next-line no-console
     console.log(details);
     const outputPath = core.getInput('output-report');
@@ -202,37 +201,6 @@ const reportToRuntime = (report) => {
         .sort((a, b) => (a.runtime < b.runtime ? -1 : 1));
 };
 exports.reportToRuntime = reportToRuntime;
-
-
-/***/ }),
-
-/***/ 2271:
-/***/ ((__unused_webpack_module, exports) => {
-
-"use strict";
-
-Object.defineProperty(exports, "__esModule", ({ value: true }));
-exports.runtimeDetails = void 0;
-/**
- * Reads file array and returns details about the
- * nature of the set of files
- * @param files an array of files with runtime
- */
-const runtimeDetails = (files) => {
-    const [longestTest] = files.sort((a, b) => (a.runtime > b.runtime ? -1 : 1));
-    const totalRuntime = files.reduce((runtime, file) => {
-        // console.log(runtime);
-        return runtime + file.runtime;
-    }, 0);
-    const suggestedGroupCount = Math.ceil(totalRuntime / longestTest.runtime);
-    return {
-        longestTest: longestTest.runtime,
-        longestTestName: longestTest.filePath,
-        totalRuntime,
-        suggestedGroupCount,
-    };
-};
-exports.runtimeDetails = runtimeDetails;
 
 
 /***/ }),
