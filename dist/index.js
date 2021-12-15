@@ -177,7 +177,7 @@ const moveCucumberReports = async (groupFolderPath) => {
         // Create the full json report path
         const originalReportPath = `${groupFolderPath}/${reportName}/${reportName}-cucumber-report.json`;
         // Make a temporary directory
-        await fs_1.promises.mkdir('cucumber-processing', { recursive: true });
+        await fs_1.promises.mkdir(folder_names_1.tempFolder, { recursive: true });
         // Copy the json report to the new location
         await fs_1.promises.copyFile(originalReportPath, `${folder_names_1.tempFolder}/${reportName}-cucumber-report.json`);
     }

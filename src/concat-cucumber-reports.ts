@@ -1,6 +1,5 @@
 /* eslint-disable @typescript-eslint/prefer-for-of */
 import { CucumberFeature } from 'cucumber-report-analyzer';
-
 import { promises as fs } from 'fs';
 import { tempFolder } from './folder-names';
 
