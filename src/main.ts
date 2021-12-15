@@ -3,13 +3,13 @@ import {
   FileWithRuntime,
   SplitConfig,
   createSplitConfig,
+  runtimeDetails,
 } from 'split-config-generator';
 import { CucumberFeature } from 'cucumber-report-analyzer';
 import { concatReports } from './concat-cucumber-reports';
 import { promises as fs } from 'fs';
 import { moveCucumberReports } from './move-cucumber-reports';
 import { reportToRuntime } from './report-to-runtime';
-import { runtimeDetails } from './runtime-details';
 import { tempFolder } from './folder-names';
 
 async function run(): Promise<void> {
