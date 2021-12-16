@@ -27,7 +27,7 @@
   "dependencies": {
     "@actions/core": "^1.6.0",
     "cucumber-report-analyzer": "^2.0.1",
-    "split-config-generator": "^1.2.1"
+    "split-config-generator": "^1.2.3"
   },
   "devDependencies": {
     "@types/node": "^16.11.13",
