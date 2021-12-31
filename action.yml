@@ -10,6 +10,9 @@ inputs:
     required: false
     description: 'relative path to output report'
     default: 'cucumber-split-config.json'
+  group-count:
+    required: false
+    description: 'The number of groups to split the cucumber reports into'
 runs:
   using: 'node16'
   main: 'dist/index.js'

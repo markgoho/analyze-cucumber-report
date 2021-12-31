@@ -55,11 +55,27 @@ async function run(): Promise<void> {
 
   const cucumberReport: CucumberFeature[] = JSON.parse(cucumberReportString);
 
+  // Create list of files with runtime for analysis
   const files: FileWithRuntime[] = reportToRuntime(cucumberReport);
-  const splitConfig: SplitConfig = createSplitConfig(files);
+
+  // Run analysis on the files
   const details = runtimeDetails(files);
+
+  const groupCountInput: string = core.getInput('group-count');
+
+  let groupCount: number | undefined;
+  if (groupCountInput.length === 0) {
+    groupCount = undefined;
+  } else {
+    groupCount = parseInt(groupCountInput, 10);
+  }
+
+  const splitConfig: SplitConfig = createSplitConfig(files, groupCount);
   // eslint-disable-next-line no-console
-  console.log(details);
+  console.log({
+    ...details,
+    groupCount: splitConfig.length,
+  });
 
   const outputPath = core.getInput('output-report');
   try {

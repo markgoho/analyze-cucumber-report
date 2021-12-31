@@ -97,3 +97,7 @@ Thumbs.db
 # Ignore built ts files
 __tests__/runner/*
 lib/**/*
+
+# Ignore test output
+cucumber-processing
+cucumber-split-config.json
