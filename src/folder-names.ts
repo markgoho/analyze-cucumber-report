@@ -1,1 +1,1 @@
-export const tempFolder = 'cucumber-processing';
+export const temporaryFolder = 'cucumber-processing';

@@ -8,23 +8,24 @@ require('./sourcemap-register.js');/******/ (() => { // webpackBootstrap
 
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.concatReports = void 0;
+// eslint-disable-next-line unicorn/prefer-node-protocol
 const fs_1 = __nccwpck_require__(7147);
 const folder_names_1 = __nccwpck_require__(9885);
 /**
  * Concatenates all the cucumber reports in the given folder.
  */
 const concatReports = async () => {
-    const allFiles = await fs_1.promises.readdir(folder_names_1.tempFolder);
+    const allFiles = await fs_1.promises.readdir(folder_names_1.temporaryFolder);
     // Primarily for safety in case something unexpected is added to the folder
     const cucumberReports = allFiles.filter(file => file.endsWith('.json'));
     const singleReport = [];
-    for (let index = 0; index < cucumberReports.length; index++) {
-        const path = `${folder_names_1.tempFolder}/${cucumberReports[index]}`;
+    for (const cucumberReport of cucumberReports) {
+        const path = `${folder_names_1.temporaryFolder}/${cucumberReport}`;
         const report = await fs_1.promises.readFile(path, 'utf8');
         singleReport.push(JSON.parse(report));
     }
     const jsonList = JSON.stringify(singleReport.flat());
-    await fs_1.promises.writeFile(`${folder_names_1.tempFolder}/local-cucumber-report.json`, jsonList);
+    await fs_1.promises.writeFile(`${folder_names_1.temporaryFolder}/local-cucumber-report.json`, jsonList);
 };
 exports.concatReports = concatReports;
 
@@ -38,14 +39,15 @@ exports.concatReports = concatReports;
 
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.createFileWithRuntime = void 0;
+/* eslint-disable unicorn/no-array-callback-reference */
 const cucumber_report_analyzer_1 = __nccwpck_require__(1759);
 const createFileWithRuntime = (feature) => {
     const scenarioElements = feature.elements.filter(cucumber_report_analyzer_1.isScenario);
     const backgroundElements = feature.elements.filter(cucumber_report_analyzer_1.isBackground);
     const scenarioElementsRuntimes = scenarioElements.map(cucumber_report_analyzer_1.calculateScenarioRuntime);
     const backgroundElementsRuntimes = backgroundElements.map(cucumber_report_analyzer_1.calculateBackgroundRuntime);
-    const scenariosRuntime = scenarioElementsRuntimes.reduce((acc, curr) => acc + curr, 0);
-    const backgroundRuntime = backgroundElementsRuntimes.reduce((acc, curr) => acc + curr, 0);
+    const scenariosRuntime = scenarioElementsRuntimes.reduce((accumulator, current) => accumulator + current, 0);
+    const backgroundRuntime = backgroundElementsRuntimes.reduce((accumulator, current) => accumulator + current, 0);
     return {
         filePath: feature.uri,
         runtime: scenariosRuntime + backgroundRuntime,
@@ -62,8 +64,8 @@ exports.createFileWithRuntime = createFileWithRuntime;
 "use strict";
 
 Object.defineProperty(exports, "__esModule", ({ value: true }));
-exports.tempFolder = void 0;
-exports.tempFolder = 'cucumber-processing';
+exports.temporaryFolder = void 0;
+exports.temporaryFolder = 'cucumber-processing';
 
 
 /***/ }),
@@ -96,6 +98,7 @@ Object.defineProperty(exports, "__esModule", ({ value: true }));
 const core = __importStar(__nccwpck_require__(2186));
 const split_config_generator_1 = __nccwpck_require__(3116);
 const concat_cucumber_reports_1 = __nccwpck_require__(9251);
+// eslint-disable-next-line unicorn/prefer-node-protocol
 const fs_1 = __nccwpck_require__(7147);
 const move_cucumber_reports_1 = __nccwpck_require__(532);
 const report_to_runtime_1 = __nccwpck_require__(1588);
@@ -124,7 +127,7 @@ async function run() {
     }
     let cucumberReportString;
     try {
-        cucumberReportString = await fs_1.promises.readFile(`${folder_names_1.tempFolder}/local-cucumber-report.json`, 'utf-8');
+        cucumberReportString = await fs_1.promises.readFile(`${folder_names_1.temporaryFolder}/local-cucumber-report.json`, 'utf-8');
     }
     catch (error) {
         if (error instanceof Error) {
@@ -138,13 +141,9 @@ async function run() {
     // Run analysis on the files
     const details = (0, split_config_generator_1.runtimeDetails)(files);
     const groupCountInput = core.getInput('group-count');
-    let groupCount;
-    if (groupCountInput.length === 0) {
-        groupCount = undefined;
-    }
-    else {
-        groupCount = parseInt(groupCountInput, 10);
-    }
+    const groupCount = groupCountInput.length === 0
+        ? undefined
+        : Number.parseInt(groupCountInput, 10);
     const splitConfig = (0, split_config_generator_1.createSplitConfig)(files, groupCount);
     // eslint-disable-next-line no-console
     console.log({
@@ -173,7 +172,7 @@ run();
 
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.moveCucumberReports = void 0;
-/* eslint-disable @typescript-eslint/prefer-for-of */
+// eslint-disable-next-line unicorn/prefer-node-protocol
 const fs_1 = __nccwpck_require__(7147);
 const folder_names_1 = __nccwpck_require__(9885);
 /**
@@ -184,15 +183,14 @@ const folder_names_1 = __nccwpck_require__(9885);
  */
 const moveCucumberReports = async (groupFolderPath) => {
     const reportNames = await fs_1.promises.readdir(groupFolderPath);
-    for (let i = 0; i < reportNames.length; i++) {
+    for (const reportName of reportNames) {
         // Get the folder name, e.g. admin, cover_all, etc.
-        const reportName = reportNames[i];
         // Create the full json report path
         const originalReportPath = `${groupFolderPath}/${reportName}/${reportName}-cucumber-report.json`;
         // Make a temporary directory
-        await fs_1.promises.mkdir(folder_names_1.tempFolder, { recursive: true });
+        await fs_1.promises.mkdir(folder_names_1.temporaryFolder, { recursive: true });
         // Copy the json report to the new location
-        await fs_1.promises.copyFile(originalReportPath, `${folder_names_1.tempFolder}/${reportName}-cucumber-report.json`);
+        await fs_1.promises.copyFile(originalReportPath, `${folder_names_1.temporaryFolder}/${reportName}-cucumber-report.json`);
     }
 };
 exports.moveCucumberReports = moveCucumberReports;
@@ -210,7 +208,7 @@ exports.reportToRuntime = void 0;
 const create_file_with_runtime_1 = __nccwpck_require__(2829);
 const reportToRuntime = (report) => {
     return report
-        .map(create_file_with_runtime_1.createFileWithRuntime)
+        .map(feature => (0, create_file_with_runtime_1.createFileWithRuntime)(feature))
         .sort((a, b) => (a.runtime < b.runtime ? -1 : 1));
 };
 exports.reportToRuntime = reportToRuntime;

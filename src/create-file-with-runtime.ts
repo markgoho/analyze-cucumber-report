@@ -1,3 +1,4 @@
+/* eslint-disable unicorn/no-array-callback-reference */
 import {
   BackgroundElement,
   CucumberFeature,
@@ -26,12 +27,12 @@ export const createFileWithRuntime = (
   );
 
   const scenariosRuntime = scenarioElementsRuntimes.reduce(
-    (acc, curr) => acc + curr,
+    (accumulator, current) => accumulator + current,
     0,
   );
 
   const backgroundRuntime = backgroundElementsRuntimes.reduce(
-    (acc, curr) => acc + curr,
+    (accumulator, current) => accumulator + current,
     0,
   );
 

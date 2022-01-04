@@ -7,10 +7,11 @@ import {
 } from 'split-config-generator';
 import { CucumberFeature } from 'cucumber-report-analyzer';
 import { concatReports } from './concat-cucumber-reports';
+// eslint-disable-next-line unicorn/prefer-node-protocol
 import { promises as fs } from 'fs';
 import { moveCucumberReports } from './move-cucumber-reports';
 import { reportToRuntime } from './report-to-runtime';
-import { tempFolder } from './folder-names';
+import { temporaryFolder } from './folder-names';
 
 async function run(): Promise<void> {
   const individualReportsFolder: string = core.getInput(
@@ -43,7 +44,7 @@ async function run(): Promise<void> {
 
   try {
     cucumberReportString = await fs.readFile(
-      `${tempFolder}/local-cucumber-report.json`,
+      `${temporaryFolder}/local-cucumber-report.json`,
       'utf-8',
     );
   } catch (error) {
@@ -63,12 +64,10 @@ async function run(): Promise<void> {
 
   const groupCountInput: string = core.getInput('group-count');
 
-  let groupCount: number | undefined;
-  if (groupCountInput.length === 0) {
-    groupCount = undefined;
-  } else {
-    groupCount = parseInt(groupCountInput, 10);
-  }
+  const groupCount =
+    groupCountInput.length === 0
+      ? undefined
+      : Number.parseInt(groupCountInput, 10);
 
   const splitConfig: SplitConfig = createSplitConfig(files, groupCount);
   // eslint-disable-next-line no-console

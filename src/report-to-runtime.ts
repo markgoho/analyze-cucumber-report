@@ -7,6 +7,6 @@ export const reportToRuntime = (
   report: CucumberFeature[],
 ): FileWithRuntime[] => {
   return report
-    .map(createFileWithRuntime)
+    .map(feature => createFileWithRuntime(feature))
     .sort((a, b) => (a.runtime < b.runtime ? -1 : 1));
 };

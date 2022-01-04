@@ -1,7 +1,7 @@
-/* eslint-disable @typescript-eslint/prefer-for-of */
+// eslint-disable-next-line unicorn/prefer-node-protocol
 import { promises as fs } from 'fs';
 
-import { tempFolder } from './folder-names';
+import { temporaryFolder } from './folder-names';
 
 /**
  * When downloaded, each cucumber report appears in a folder named after the
@@ -14,20 +14,19 @@ export const moveCucumberReports = async (
 ): Promise<void> => {
   const reportNames: string[] = await fs.readdir(groupFolderPath);
 
-  for (let i = 0; i < reportNames.length; i++) {
+  for (const reportName of reportNames) {
     // Get the folder name, e.g. admin, cover_all, etc.
-    const reportName = reportNames[i];
 
     // Create the full json report path
     const originalReportPath = `${groupFolderPath}/${reportName}/${reportName}-cucumber-report.json`;
 
     // Make a temporary directory
-    await fs.mkdir(tempFolder, { recursive: true });
+    await fs.mkdir(temporaryFolder, { recursive: true });
 
     // Copy the json report to the new location
     await fs.copyFile(
       originalReportPath,
-      `${tempFolder}/${reportName}-cucumber-report.json`,
+      `${temporaryFolder}/${reportName}-cucumber-report.json`,
     );
   }
 };
