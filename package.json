@@ -26,7 +26,7 @@
   "license": "MIT",
   "dependencies": {
     "@actions/core": "^1.6.0",
-    "cucumber-report-analyzer": "^2.0.1",
+    "cucumber-report-analyzer": "^2.0.2",
     "split-config-generator": "^1.3.0"
   },
   "devDependencies": {
