@@ -45,7 +45,7 @@ async function run(): Promise<void> {
   try {
     cucumberReportString = await fs.readFile(
       `${temporaryFolder}/local-cucumber-report.json`,
-      'utf-8',
+      'utf8',
     );
   } catch (error) {
     if (error instanceof Error) {

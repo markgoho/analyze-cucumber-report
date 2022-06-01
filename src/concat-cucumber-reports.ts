@@ -1,4 +1,3 @@
-/* eslint-disable unicorn/prefer-json-parse-buffer */
 import { CucumberFeature } from 'cucumber-report-analyzer';
 // eslint-disable-next-line unicorn/prefer-node-protocol
 import { promises as fs } from 'fs';
