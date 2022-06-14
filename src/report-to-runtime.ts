@@ -1,7 +1,8 @@
 import { CucumberFeature } from 'cucumber-report-analyzer';
 import { FileWithRuntime } from 'split-config-generator';
 
-import { createFileWithRuntime } from './create-file-with-runtime';
+// eslint-disable-next-line import/no-unresolved
+import { createFileWithRuntime } from './create-file-with-runtime.js';
 
 export const reportToRuntime = (
   report: CucumberFeature[],

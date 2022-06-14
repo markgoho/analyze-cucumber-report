@@ -1,7 +1,8 @@
 import { CucumberFeature } from 'cucumber-report-analyzer';
-// eslint-disable-next-line unicorn/prefer-node-protocol
-import { promises as fs } from 'fs';
-import { temporaryFolder } from './folder-names';
+import { promises as fs } from 'node:fs';
+
+// eslint-disable-next-line import/no-unresolved
+import { temporaryFolder } from './folder-names.js';
 
 /**
  * Concatenates all the cucumber reports in the given folder.

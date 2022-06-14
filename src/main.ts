@@ -1,3 +1,5 @@
+/* eslint-disable import/no-unresolved */
+import { readFile, writeFile } from 'node:fs/promises';
 import * as core from '@actions/core';
 import {
   FileWithRuntime,
@@ -6,12 +8,11 @@ import {
   runtimeDetails,
 } from 'split-config-generator';
 import { CucumberFeature } from 'cucumber-report-analyzer';
-import { concatReports } from './concat-cucumber-reports';
-// eslint-disable-next-line unicorn/prefer-node-protocol
-import { promises as fs } from 'fs';
-import { moveCucumberReports } from './move-cucumber-reports';
-import { reportToRuntime } from './report-to-runtime';
-import { temporaryFolder } from './folder-names';
+
+import { concatReports } from './concat-cucumber-reports.js';
+import { moveCucumberReports } from './move-cucumber-reports.js';
+import { reportToRuntime } from './report-to-runtime.js';
+import { temporaryFolder } from './folder-names.js';
 
 async function run(): Promise<void> {
   const individualReportsFolder: string = core.getInput(
@@ -43,7 +44,7 @@ async function run(): Promise<void> {
   let cucumberReportString: string;
 
   try {
-    cucumberReportString = await fs.readFile(
+    cucumberReportString = await readFile(
       `${temporaryFolder}/local-cucumber-report.json`,
       'utf8',
     );
@@ -78,7 +79,7 @@ async function run(): Promise<void> {
 
   const outputPath = core.getInput('output-report');
   try {
-    await fs.writeFile(outputPath, JSON.stringify(splitConfig));
+    await writeFile(outputPath, JSON.stringify(splitConfig));
   } catch (error) {
     if (error instanceof Error) {
       core.setFailed(

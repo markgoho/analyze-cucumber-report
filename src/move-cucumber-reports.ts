@@ -1,7 +1,8 @@
 // eslint-disable-next-line unicorn/prefer-node-protocol
 import { promises as fs } from 'fs';
 
-import { temporaryFolder } from './folder-names';
+// eslint-disable-next-line import/no-unresolved
+import { temporaryFolder } from './folder-names.js';
 
 /**
  * When downloaded, each cucumber report appears in a folder named after the
