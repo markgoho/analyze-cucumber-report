@@ -28,7 +28,7 @@ const concatReports = async () => {
     await fs_1.promises.writeFile(`${folder_names_1.temporaryFolder}/local-cucumber-report.json`, jsonList);
 };
 exports.concatReports = concatReports;
-
+//# sourceMappingURL=concat-cucumber-reports.js.map
 
 /***/ }),
 
@@ -54,7 +54,7 @@ const createFileWithRuntime = (feature) => {
     };
 };
 exports.createFileWithRuntime = createFileWithRuntime;
-
+//# sourceMappingURL=create-file-with-runtime.js.map
 
 /***/ }),
 
@@ -66,7 +66,7 @@ exports.createFileWithRuntime = createFileWithRuntime;
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.temporaryFolder = void 0;
 exports.temporaryFolder = 'cucumber-processing';
-
+//# sourceMappingURL=folder-names.js.map
 
 /***/ }),
 
@@ -165,7 +165,7 @@ async function run() {
     }
 }
 run();
-
+//# sourceMappingURL=main.js.map
 
 /***/ }),
 
@@ -198,7 +198,7 @@ const moveCucumberReports = async (groupFolderPath) => {
     }
 };
 exports.moveCucumberReports = moveCucumberReports;
-
+//# sourceMappingURL=move-cucumber-reports.js.map
 
 /***/ }),
 
@@ -216,7 +216,7 @@ const reportToRuntime = (report) => {
         .sort((a, b) => (a.runtime < b.runtime ? -1 : 1));
 };
 exports.reportToRuntime = reportToRuntime;
-
+//# sourceMappingURL=report-to-runtime.js.map
 
 /***/ }),
 
