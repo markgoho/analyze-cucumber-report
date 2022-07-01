@@ -2564,6 +2564,13 @@ module.exports = __WEBPACK_EXTERNAL_createRequire(import.meta.url)("net");
 
 /***/ }),
 
+/***/ 3977:
+/***/ ((module) => {
+
+module.exports = __WEBPACK_EXTERNAL_createRequire(import.meta.url)("node:fs/promises");
+
+/***/ }),
+
 /***/ 2037:
 /***/ ((module) => {
 
@@ -2589,6 +2596,210 @@ module.exports = __WEBPACK_EXTERNAL_createRequire(import.meta.url)("tls");
 /***/ ((module) => {
 
 module.exports = __WEBPACK_EXTERNAL_createRequire(import.meta.url)("util");
+
+/***/ }),
+
+/***/ 5724:
+/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __nccwpck_require__) => {
+
+
+// EXPORTS
+__nccwpck_require__.d(__webpack_exports__, {
+  "B": () => (/* binding */ concatReports)
+});
+
+;// CONCATENATED MODULE: external "node:fs"
+const external_node_fs_namespaceObject = __WEBPACK_EXTERNAL_createRequire(import.meta.url)("node:fs");
+// EXTERNAL MODULE: ./lib/folder-names.js
+var folder_names = __nccwpck_require__(5759);
+;// CONCATENATED MODULE: ./lib/concat-cucumber-reports.js
+
+// eslint-disable-next-line import/no-unresolved
+
+/**
+ * Concatenates all the cucumber reports in the given folder.
+ */
+const concatReports = async () => {
+    const allFiles = await external_node_fs_namespaceObject.promises.readdir(folder_names/* temporaryFolder */.q);
+    // Primarily for safety in case something unexpected is added to the folder
+    const cucumberReports = allFiles.filter(file => file.endsWith('.json'));
+    const singleReport = [];
+    for (const cucumberReport of cucumberReports) {
+        const path = `${folder_names/* temporaryFolder */.q}/${cucumberReport}`;
+        const report = await external_node_fs_namespaceObject.promises.readFile(path, 'utf8');
+        singleReport.push(JSON.parse(report));
+    }
+    const jsonList = JSON.stringify(singleReport.flat());
+    await external_node_fs_namespaceObject.promises.writeFile(`${folder_names/* temporaryFolder */.q}/local-cucumber-report.json`, jsonList);
+};
+//# sourceMappingURL=concat-cucumber-reports.js.map
+
+/***/ }),
+
+/***/ 5759:
+/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __nccwpck_require__) => {
+
+/* harmony export */ __nccwpck_require__.d(__webpack_exports__, {
+/* harmony export */   "q": () => (/* binding */ temporaryFolder)
+/* harmony export */ });
+const temporaryFolder = 'cucumber-processing';
+//# sourceMappingURL=folder-names.js.map
+
+/***/ }),
+
+/***/ 2092:
+/***/ ((__webpack_module__, __unused_webpack___webpack_exports__, __nccwpck_require__) => {
+
+__nccwpck_require__.a(__webpack_module__, async (__webpack_handle_async_dependencies__) => {
+/* harmony import */ var node_fs_promises__WEBPACK_IMPORTED_MODULE_0__ = __nccwpck_require__(3977);
+/* harmony import */ var _actions_core__WEBPACK_IMPORTED_MODULE_1__ = __nccwpck_require__(2186);
+/* harmony import */ var split_config_generator__WEBPACK_IMPORTED_MODULE_2__ = __nccwpck_require__(3116);
+/* harmony import */ var _concat_cucumber_reports_js__WEBPACK_IMPORTED_MODULE_3__ = __nccwpck_require__(5724);
+/* harmony import */ var _move_cucumber_reports_js__WEBPACK_IMPORTED_MODULE_4__ = __nccwpck_require__(5367);
+/* harmony import */ var _report_to_runtime_js__WEBPACK_IMPORTED_MODULE_5__ = __nccwpck_require__(7666);
+/* harmony import */ var _folder_names_js__WEBPACK_IMPORTED_MODULE_6__ = __nccwpck_require__(5759);
+/* eslint-disable import/no-unresolved */
+
+
+
+
+
+
+
+async function run() {
+    const individualReportsFolder = _actions_core__WEBPACK_IMPORTED_MODULE_1__.getInput('individual-reports-folder');
+    // Move the cucumber reports to a single folder
+    try {
+        await (0,_move_cucumber_reports_js__WEBPACK_IMPORTED_MODULE_4__/* .moveCucumberReports */ .v)(individualReportsFolder);
+    }
+    catch (error) {
+        if (error instanceof Error) {
+            _actions_core__WEBPACK_IMPORTED_MODULE_1__.setFailed(`Could not move the cucumber reports: ${error.message}`);
+            return;
+        }
+    }
+    // Concatenate the cucumber reports
+    try {
+        await (0,_concat_cucumber_reports_js__WEBPACK_IMPORTED_MODULE_3__/* .concatReports */ .B)();
+    }
+    catch (error) {
+        if (error instanceof Error) {
+            _actions_core__WEBPACK_IMPORTED_MODULE_1__.setFailed(`Could not concatenate the cucumber reports: ${error.message}`);
+            return;
+        }
+    }
+    let cucumberReportString;
+    try {
+        cucumberReportString = await (0,node_fs_promises__WEBPACK_IMPORTED_MODULE_0__.readFile)(`${_folder_names_js__WEBPACK_IMPORTED_MODULE_6__/* .temporaryFolder */ .q}/local-cucumber-report.json`, 'utf8');
+    }
+    catch (error) {
+        if (error instanceof Error) {
+            _actions_core__WEBPACK_IMPORTED_MODULE_1__.setFailed(`Could not read report: ${error.message}`);
+        }
+        return;
+    }
+    const cucumberReport = JSON.parse(cucumberReportString);
+    // Create list of files with runtime for analysis
+    const files = (0,_report_to_runtime_js__WEBPACK_IMPORTED_MODULE_5__/* .reportToRuntime */ .j)(cucumberReport);
+    // Run analysis on the files
+    const details = (0,split_config_generator__WEBPACK_IMPORTED_MODULE_2__.runtimeDetails)(files);
+    const groupCountInput = _actions_core__WEBPACK_IMPORTED_MODULE_1__.getInput('group-count');
+    const groupCount = groupCountInput.length === 0
+        ? undefined
+        : Number.parseInt(groupCountInput, 10);
+    const splitConfig = (0,split_config_generator__WEBPACK_IMPORTED_MODULE_2__.createSplitConfig)(files, groupCount);
+    // eslint-disable-next-line no-console
+    console.log({
+        ...details,
+        groupCount: splitConfig.length,
+    });
+    const outputPath = _actions_core__WEBPACK_IMPORTED_MODULE_1__.getInput('output-report');
+    try {
+        await (0,node_fs_promises__WEBPACK_IMPORTED_MODULE_0__.writeFile)(outputPath, JSON.stringify(splitConfig));
+    }
+    catch (error) {
+        if (error instanceof Error) {
+            _actions_core__WEBPACK_IMPORTED_MODULE_1__.setFailed(`Setting report to ${outputPath} failed: ${error.message}`);
+        }
+    }
+}
+await run();
+//# sourceMappingURL=main.js.map
+__webpack_handle_async_dependencies__();
+}, 1);
+
+/***/ }),
+
+/***/ 5367:
+/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __nccwpck_require__) => {
+
+/* harmony export */ __nccwpck_require__.d(__webpack_exports__, {
+/* harmony export */   "v": () => (/* binding */ moveCucumberReports)
+/* harmony export */ });
+/* harmony import */ var fs__WEBPACK_IMPORTED_MODULE_0__ = __nccwpck_require__(7147);
+/* harmony import */ var _folder_names_js__WEBPACK_IMPORTED_MODULE_1__ = __nccwpck_require__(5759);
+// eslint-disable-next-line unicorn/prefer-node-protocol
+
+// eslint-disable-next-line import/no-unresolved
+
+/**
+ * When downloaded, each cucumber report appears in a folder named after the
+ * cucumber report. They each need to be moved to a single folder for the next
+ * step in the process
+ * @param groupFolderPath the path to the folder containing the cucumber reports
+ */
+const moveCucumberReports = async (groupFolderPath) => {
+    const reportNames = await fs__WEBPACK_IMPORTED_MODULE_0__.promises.readdir(groupFolderPath);
+    for (const reportName of reportNames) {
+        // Get the folder name, e.g. admin, cover_all, etc.
+        // Create the full json report path
+        const originalReportPath = `${groupFolderPath}/${reportName}/${reportName}-cucumber-report.json`;
+        // Make a temporary directory
+        await fs__WEBPACK_IMPORTED_MODULE_0__.promises.mkdir(_folder_names_js__WEBPACK_IMPORTED_MODULE_1__/* .temporaryFolder */ .q, { recursive: true });
+        // Copy the json report to the new location
+        await fs__WEBPACK_IMPORTED_MODULE_0__.promises.copyFile(originalReportPath, `${_folder_names_js__WEBPACK_IMPORTED_MODULE_1__/* .temporaryFolder */ .q}/${reportName}-cucumber-report.json`);
+    }
+};
+//# sourceMappingURL=move-cucumber-reports.js.map
+
+/***/ }),
+
+/***/ 7666:
+/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __nccwpck_require__) => {
+
+
+// EXPORTS
+__nccwpck_require__.d(__webpack_exports__, {
+  "j": () => (/* binding */ reportToRuntime)
+});
+
+// EXTERNAL MODULE: ./node_modules/cucumber-report-analyzer/dist/index.js
+var dist = __nccwpck_require__(1759);
+;// CONCATENATED MODULE: ./lib/create-file-with-runtime.js
+/* eslint-disable unicorn/no-array-callback-reference */
+
+const createFileWithRuntime = (feature) => {
+    const scenarioElements = feature.elements.filter(dist.isScenario);
+    const backgroundElements = feature.elements.filter(dist.isBackground);
+    const scenarioElementsRuntimes = scenarioElements.map(dist.calculateScenarioRuntime);
+    const backgroundElementsRuntimes = backgroundElements.map(dist.calculateBackgroundRuntime);
+    const scenariosRuntime = scenarioElementsRuntimes.reduce((accumulator, current) => accumulator + current, 0);
+    const backgroundRuntime = backgroundElementsRuntimes.reduce((accumulator, current) => accumulator + current, 0);
+    return {
+        filePath: feature.uri,
+        runtime: scenariosRuntime + backgroundRuntime,
+    };
+};
+//# sourceMappingURL=create-file-with-runtime.js.map
+;// CONCATENATED MODULE: ./lib/report-to-runtime.js
+// eslint-disable-next-line import/no-unresolved
+
+const reportToRuntime = (report) => {
+    return report
+        .map(feature => createFileWithRuntime(feature))
+        .sort((a, b) => (a.runtime < b.runtime ? -1 : 1));
+};
+//# sourceMappingURL=report-to-runtime.js.map
 
 /***/ })
 
@@ -2625,169 +2836,108 @@ module.exports = __WEBPACK_EXTERNAL_createRequire(import.meta.url)("util");
 /******/ }
 /******/ 
 /************************************************************************/
+/******/ /* webpack/runtime/async module */
+/******/ (() => {
+/******/ 	var webpackThen = typeof Symbol === "function" ? Symbol("webpack then") : "__webpack_then__";
+/******/ 	var webpackExports = typeof Symbol === "function" ? Symbol("webpack exports") : "__webpack_exports__";
+/******/ 	var completeQueue = (queue) => {
+/******/ 		if(queue) {
+/******/ 			queue.forEach((fn) => (fn.r--));
+/******/ 			queue.forEach((fn) => (fn.r-- ? fn.r++ : fn()));
+/******/ 		}
+/******/ 	}
+/******/ 	var completeFunction = (fn) => (!--fn.r && fn());
+/******/ 	var queueFunction = (queue, fn) => (queue ? queue.push(fn) : completeFunction(fn));
+/******/ 	var wrapDeps = (deps) => (deps.map((dep) => {
+/******/ 		if(dep !== null && typeof dep === "object") {
+/******/ 			if(dep[webpackThen]) return dep;
+/******/ 			if(dep.then) {
+/******/ 				var queue = [];
+/******/ 				dep.then((r) => {
+/******/ 					obj[webpackExports] = r;
+/******/ 					completeQueue(queue);
+/******/ 					queue = 0;
+/******/ 				});
+/******/ 				var obj = {};
+/******/ 											obj[webpackThen] = (fn, reject) => (queueFunction(queue, fn), dep['catch'](reject));
+/******/ 				return obj;
+/******/ 			}
+/******/ 		}
+/******/ 		var ret = {};
+/******/ 							ret[webpackThen] = (fn) => (completeFunction(fn));
+/******/ 							ret[webpackExports] = dep;
+/******/ 							return ret;
+/******/ 	}));
+/******/ 	__nccwpck_require__.a = (module, body, hasAwait) => {
+/******/ 		var queue = hasAwait && [];
+/******/ 		var exports = module.exports;
+/******/ 		var currentDeps;
+/******/ 		var outerResolve;
+/******/ 		var reject;
+/******/ 		var isEvaluating = true;
+/******/ 		var nested = false;
+/******/ 		var whenAll = (deps, onResolve, onReject) => {
+/******/ 			if (nested) return;
+/******/ 			nested = true;
+/******/ 			onResolve.r += deps.length;
+/******/ 			deps.map((dep, i) => (dep[webpackThen](onResolve, onReject)));
+/******/ 			nested = false;
+/******/ 		};
+/******/ 		var promise = new Promise((resolve, rej) => {
+/******/ 			reject = rej;
+/******/ 			outerResolve = () => (resolve(exports), completeQueue(queue), queue = 0);
+/******/ 		});
+/******/ 		promise[webpackExports] = exports;
+/******/ 		promise[webpackThen] = (fn, rejectFn) => {
+/******/ 			if (isEvaluating) { return completeFunction(fn); }
+/******/ 			if (currentDeps) whenAll(currentDeps, fn, rejectFn);
+/******/ 			queueFunction(queue, fn);
+/******/ 			promise['catch'](rejectFn);
+/******/ 		};
+/******/ 		module.exports = promise;
+/******/ 		body((deps) => {
+/******/ 			if(!deps) return outerResolve();
+/******/ 			currentDeps = wrapDeps(deps);
+/******/ 			var fn, result;
+/******/ 			var promise = new Promise((resolve, reject) => {
+/******/ 				fn = () => (resolve(result = currentDeps.map((d) => (d[webpackExports]))));
+/******/ 				fn.r = 0;
+/******/ 				whenAll(currentDeps, fn, reject);
+/******/ 			});
+/******/ 			return fn.r ? promise : result;
+/******/ 		}).then(outerResolve, reject);
+/******/ 		isEvaluating = false;
+/******/ 	};
+/******/ })();
+/******/ 
+/******/ /* webpack/runtime/define property getters */
+/******/ (() => {
+/******/ 	// define getter functions for harmony exports
+/******/ 	__nccwpck_require__.d = (exports, definition) => {
+/******/ 		for(var key in definition) {
+/******/ 			if(__nccwpck_require__.o(definition, key) && !__nccwpck_require__.o(exports, key)) {
+/******/ 				Object.defineProperty(exports, key, { enumerable: true, get: definition[key] });
+/******/ 			}
+/******/ 		}
+/******/ 	};
+/******/ })();
+/******/ 
+/******/ /* webpack/runtime/hasOwnProperty shorthand */
+/******/ (() => {
+/******/ 	__nccwpck_require__.o = (obj, prop) => (Object.prototype.hasOwnProperty.call(obj, prop))
+/******/ })();
+/******/ 
 /******/ /* webpack/runtime/compat */
 /******/ 
 /******/ if (typeof __nccwpck_require__ !== 'undefined') __nccwpck_require__.ab = new URL('.', import.meta.url).pathname.slice(import.meta.url.match(/^file:\/\/\/\w:/) ? 1 : 0, -1) + "/";
 /******/ 
 /************************************************************************/
-var __webpack_exports__ = {};
-// This entry need to be wrapped in an IIFE because it need to be isolated against other modules in the chunk.
-(() => {
-
-;// CONCATENATED MODULE: external "node:fs/promises"
-const promises_namespaceObject = __WEBPACK_EXTERNAL_createRequire(import.meta.url)("node:fs/promises");
-// EXTERNAL MODULE: ./node_modules/@actions/core/lib/core.js
-var core = __nccwpck_require__(2186);
-// EXTERNAL MODULE: ./node_modules/split-config-generator/dist/index.js
-var dist = __nccwpck_require__(3116);
-;// CONCATENATED MODULE: external "node:fs"
-const external_node_fs_namespaceObject = __WEBPACK_EXTERNAL_createRequire(import.meta.url)("node:fs");
-;// CONCATENATED MODULE: ./lib/folder-names.js
-const temporaryFolder = 'cucumber-processing';
-//# sourceMappingURL=folder-names.js.map
-;// CONCATENATED MODULE: ./lib/concat-cucumber-reports.js
-
-// eslint-disable-next-line import/no-unresolved
-
-/**
- * Concatenates all the cucumber reports in the given folder.
- */
-const concatReports = async () => {
-    const allFiles = await external_node_fs_namespaceObject.promises.readdir(temporaryFolder);
-    // Primarily for safety in case something unexpected is added to the folder
-    const cucumberReports = allFiles.filter(file => file.endsWith('.json'));
-    const singleReport = [];
-    for (const cucumberReport of cucumberReports) {
-        const path = `${temporaryFolder}/${cucumberReport}`;
-        const report = await external_node_fs_namespaceObject.promises.readFile(path, 'utf8');
-        singleReport.push(JSON.parse(report));
-    }
-    const jsonList = JSON.stringify(singleReport.flat());
-    await external_node_fs_namespaceObject.promises.writeFile(`${temporaryFolder}/local-cucumber-report.json`, jsonList);
-};
-//# sourceMappingURL=concat-cucumber-reports.js.map
-// EXTERNAL MODULE: external "fs"
-var external_fs_ = __nccwpck_require__(7147);
-;// CONCATENATED MODULE: ./lib/move-cucumber-reports.js
-// eslint-disable-next-line unicorn/prefer-node-protocol
-
-// eslint-disable-next-line import/no-unresolved
-
-/**
- * When downloaded, each cucumber report appears in a folder named after the
- * cucumber report. They each need to be moved to a single folder for the next
- * step in the process
- * @param groupFolderPath the path to the folder containing the cucumber reports
- */
-const moveCucumberReports = async (groupFolderPath) => {
-    const reportNames = await external_fs_.promises.readdir(groupFolderPath);
-    for (const reportName of reportNames) {
-        // Get the folder name, e.g. admin, cover_all, etc.
-        // Create the full json report path
-        const originalReportPath = `${groupFolderPath}/${reportName}/${reportName}-cucumber-report.json`;
-        // Make a temporary directory
-        await external_fs_.promises.mkdir(temporaryFolder, { recursive: true });
-        // Copy the json report to the new location
-        await external_fs_.promises.copyFile(originalReportPath, `${temporaryFolder}/${reportName}-cucumber-report.json`);
-    }
-};
-//# sourceMappingURL=move-cucumber-reports.js.map
-// EXTERNAL MODULE: ./node_modules/cucumber-report-analyzer/dist/index.js
-var cucumber_report_analyzer_dist = __nccwpck_require__(1759);
-;// CONCATENATED MODULE: ./lib/create-file-with-runtime.js
-/* eslint-disable unicorn/no-array-callback-reference */
-
-const createFileWithRuntime = (feature) => {
-    const scenarioElements = feature.elements.filter(cucumber_report_analyzer_dist.isScenario);
-    const backgroundElements = feature.elements.filter(cucumber_report_analyzer_dist.isBackground);
-    const scenarioElementsRuntimes = scenarioElements.map(cucumber_report_analyzer_dist.calculateScenarioRuntime);
-    const backgroundElementsRuntimes = backgroundElements.map(cucumber_report_analyzer_dist.calculateBackgroundRuntime);
-    const scenariosRuntime = scenarioElementsRuntimes.reduce((accumulator, current) => accumulator + current, 0);
-    const backgroundRuntime = backgroundElementsRuntimes.reduce((accumulator, current) => accumulator + current, 0);
-    return {
-        filePath: feature.uri,
-        runtime: scenariosRuntime + backgroundRuntime,
-    };
-};
-//# sourceMappingURL=create-file-with-runtime.js.map
-;// CONCATENATED MODULE: ./lib/report-to-runtime.js
-// eslint-disable-next-line import/no-unresolved
-
-const reportToRuntime = (report) => {
-    return report
-        .map(feature => createFileWithRuntime(feature))
-        .sort((a, b) => (a.runtime < b.runtime ? -1 : 1));
-};
-//# sourceMappingURL=report-to-runtime.js.map
-;// CONCATENATED MODULE: ./lib/main.js
-/* eslint-disable import/no-unresolved */
-
-
-
-
-
-
-
-async function run() {
-    const individualReportsFolder = core.getInput('individual-reports-folder');
-    // Move the cucumber reports to a single folder
-    try {
-        await moveCucumberReports(individualReportsFolder);
-    }
-    catch (error) {
-        if (error instanceof Error) {
-            core.setFailed(`Could not move the cucumber reports: ${error.message}`);
-            return;
-        }
-    }
-    // Concatenate the cucumber reports
-    try {
-        await concatReports();
-    }
-    catch (error) {
-        if (error instanceof Error) {
-            core.setFailed(`Could not concatenate the cucumber reports: ${error.message}`);
-            return;
-        }
-    }
-    let cucumberReportString;
-    try {
-        cucumberReportString = await (0,promises_namespaceObject.readFile)(`${temporaryFolder}/local-cucumber-report.json`, 'utf8');
-    }
-    catch (error) {
-        if (error instanceof Error) {
-            core.setFailed(`Could not read report: ${error.message}`);
-        }
-        return;
-    }
-    const cucumberReport = JSON.parse(cucumberReportString);
-    // Create list of files with runtime for analysis
-    const files = reportToRuntime(cucumberReport);
-    // Run analysis on the files
-    const details = (0,dist.runtimeDetails)(files);
-    const groupCountInput = core.getInput('group-count');
-    const groupCount = groupCountInput.length === 0
-        ? undefined
-        : Number.parseInt(groupCountInput, 10);
-    const splitConfig = (0,dist.createSplitConfig)(files, groupCount);
-    // eslint-disable-next-line no-console
-    console.log({
-        ...details,
-        groupCount: splitConfig.length,
-    });
-    const outputPath = core.getInput('output-report');
-    try {
-        await (0,promises_namespaceObject.writeFile)(outputPath, JSON.stringify(splitConfig));
-    }
-    catch (error) {
-        if (error instanceof Error) {
-            core.setFailed(`Setting report to ${outputPath} failed: ${error.message}`);
-        }
-    }
-}
-run();
-//# sourceMappingURL=main.js.map
-})();
-
+/******/ 
+/******/ // startup
+/******/ // Load entry module and return exports
+/******/ // This entry module used 'module' so it can't be inlined
+/******/ var __webpack_exports__ = __nccwpck_require__(2092);
+/******/ __webpack_exports__ = await __webpack_exports__;
+/******/ 
 
 //# sourceMappingURL=index.js.map
