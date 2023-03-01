@@ -33,7 +33,7 @@
   },
   "devDependencies": {
     "@sindresorhus/tsconfig": "^3.0.1",
-    "@types/node": "^18.14.0",
+    "@types/node": "^18.14.2",
     "@typescript-eslint/parser": "^5.28.0",
     "@vercel/ncc": "^0.36.1",
     "del-cli": "^5.0.0",
