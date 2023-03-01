@@ -34,7 +34,7 @@
   "devDependencies": {
     "@sindresorhus/tsconfig": "^3.0.1",
     "@types/node": "^18.14.0",
-    "@typescript-eslint/parser": "^5.28.0",
+    "@typescript-eslint/parser": "^5.54.0",
     "@vercel/ncc": "^0.36.1",
     "del-cli": "^5.0.0",
     "eslint": "^8.17.0",
